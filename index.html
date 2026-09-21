@@ -1,229 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Khwajja Gharib Nawaz Trust — Humanitarian Welfare Trust serving humanity through compassion, welfare and social responsibility.">
-  <title>Khwajja Gharib Nawaz Trust | Humanitarian Welfare Trust</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khwajja Gharib Nawaz Trust | Humanitarian Welfare Trust</title>
+<meta name="description" content="Khwajja Gharib Nawaz Trust — serving humanity through compassion, welfare and social responsibility.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="progress"></div>
+<div class="progress" id="progress"></div>
 
-  <header class="site-header">
+<header class="site-header">
+  <div class="container nav-wrap">
     <a class="brand" href="#home">
-      <span class="brand-mark">KGN</span>
-      <span>
-        <strong>Khwajja Gharib Nawaz Trust</strong>
-        <small>Humanitarian Welfare Trust</small>
-      </span>
+      <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72v5F9hRjpYuqNxzTTOhfRVsTEzt6_t54NLrXS-g0BPWqLOOFCbqctLjlRdE_oo-s3C0c1qUX8xVjM1-HUY0Qz9KT7NQ80dRAN8a4EwfpMU47-oc0JV_b4h8h5McjaSAtWemT6bRcSjk8ED3jJgXpe-VX-vtMONfBRMgoI7emBdJIC4b97sl9JmiKOt9esk=w16383" alt="Khwajja Gharib Nawaz Trust logo">
+      <span><b>KGN</b><small>Khwajja Gharib Nawaz Trust</small></span>
     </a>
-    <button class="menu-toggle" aria-label="Open menu">☰</button>
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#work">What We Do</a>
-      <a href="#legacy">Leadership</a>
-      <a href="#projects">Projects</a>
-      <a href="#gallery">Gallery</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="#about">About Us</a><a href="#work">What We Do</a>
+      <a href="#leadership">Leadership</a><a href="#projects">Projects</a><a href="#gallery">Gallery</a>
       <a class="nav-donate" href="#donate">Donate</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-glow glow-a"></div>
-      <div class="hero-glow glow-b"></div>
-      <div class="hero-copy reveal">
-        <p class="eyebrow">KHWAJJA GHARIB NAWAZ TRUST</p>
-        <h1>Serving Humanity Through <span>Compassion</span>, Welfare & Social Responsibility</h1>
-        <p class="lead">
-          KGN Trust is a non-profit humanitarian welfare organization dedicated to supporting
-          underprivileged communities through food assistance, healthcare support, education and social welfare initiatives.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#donate">Support Our Work</a>
-          <a class="btn btn-ghost" href="#about">Discover Our Mission</a>
-        </div>
-        <div class="hero-note">Founder Trust: Late Syed Amir Moin Kazmi</div>
-      </div>
-
-      <div class="hero-visual reveal">
-        <div class="orb">
-          <div class="orb-core">KGN</div>
-          <span class="ring ring-1"></span>
-          <span class="ring ring-2"></span>
-          <span class="ring ring-3"></span>
-        </div>
-        <div class="floating-card card-one">Food • Health • Education</div>
-        <div class="floating-card card-two">Dignity • Compassion • Service</div>
-      </div>
-    </section>
-
-    <section class="ticker">
-      <span>Food Assistance</span><span>Medical Support</span><span>Education Aid</span>
-      <span>Widow & Orphan Support</span><span>Emergency Relief</span><span>Social Welfare</span>
-    </section>
-
-    <section id="about" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">ABOUT US</p>
-        <h2>Service rooted in dignity, compassion and responsibility.</h2>
-      </div>
-      <div class="two-col">
-        <article class="glass reveal">
-          <h3>Who We Are</h3>
-          <p>
-            Khwaja Gharib Nawaz Trust is a non-profit humanitarian welfare organization dedicated to serving
-            humanity with compassion, dignity, and social responsibility. Inspired by the values of service,
-            generosity, and care for the underprivileged, the Trust works to uplift vulnerable communities
-            through welfare and relief initiatives.
-          </p>
-          <p>
-            Our mission is centered on supporting individuals and families in need by addressing essential human
-            needs such as food security, healthcare support, education assistance, and community welfare, while
-            promoting values of harmony, compassion, and social well-being.
-          </p>
-          <p>
-            Alongside humanitarian work, the Trust preserves cultural and spiritual traditions as part of its
-            community engagement activities, with the aim of fostering unity, peace, and mutual respect.
-          </p>
-          <p>
-            Khwaja Gharib Nawaz Trust is a registered welfare organization committed to improving lives across
-            Pakistan and providing inclusive support without discrimination.
-          </p>
-        </article>
-        <div class="vision-stack">
-          <article class="mini-card reveal">
-            <span>01</span><h3>Our Vision</h3>
-            <p>To build a society where every individual has access to basic necessities, lives with dignity,
-              receives support during hardship, and communities remain connected through compassion and harmony.</p>
-          </article>
-          <article class="mini-card reveal">
-            <span>02</span><h3>Our Mission</h3>
-            <ul>
-              <li>Serve humanity with sincerity, transparency and accountability.</li>
-              <li>Provide sustainable welfare programs for underprivileged communities.</li>
-              <li>Promote social harmony and community well-being.</li>
-              <li>Support food security, healthcare and education initiatives.</li>
-              <li>Encourage ethical and responsible community engagement.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="section section-dark">
-      <div class="section-heading reveal">
-        <p class="eyebrow">WHAT WE DO</p>
-        <h2>Practical support for people and communities.</h2>
-      </div>
-      <div class="cards">
-        <article class="service-card reveal"><b>01</b><h3>Food Assistance</h3><p>Community feeding, Langer programs, daily rations and cooked meals.</p></article>
-        <article class="service-card reveal"><b>02</b><h3>Medical Support</h3><p>Medical aid, health awareness, basic healthcare and emergency assistance.</p></article>
-        <article class="service-card reveal"><b>03</b><h3>Education</h3><p>Assistance for orphans, deserving students and school support programs.</p></article>
-        <article class="service-card reveal"><b>04</b><h3>Emergency Relief</h3><p>Disaster relief, winter support, clothing and seasonal welfare campaigns.</p></article>
-        <article class="service-card reveal"><b>05</b><h3>Clean Water</h3><p>Clean drinking water and basic sanitation support for communities.</p></article>
-        <article class="service-card reveal"><b>06</b><h3>Community Welfare</h3><p>Support for underprivileged families, widows, orphans and vulnerable people.</p></article>
-        <article class="service-card reveal"><b>07</b><h3>Women Empowerment</h3><p>Skills, resources and guidance to help deserving women build dignified income opportunities.</p></article>
-        <article class="service-card reveal"><b>08</b><h3>Community Engagement</h3><p>Cultural and social activities that encourage peace, unity, inclusion and social cohesion.</p></article>
-      </div>
-    </section>
-
-    <section id="legacy" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">NOBLE LEGACY & LEADERSHIP</p>
-        <h2>A heritage of spirituality, justice and service.</h2>
-      </div>
-      <div class="leaders">
-        <article class="leader reveal">
-          <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vXqOYkzT3-iPJzxyPYQAIign3dbo_pbNSr9zf5jXzPR6cZLkkUkJsEWEKCF6oVg7pZUwThZLOcvB6DkfZUwHXLDgt6w7n8Rl2N_kZ0zSv71aD7JcioQmnWAmIb6WdXLSkEYkhTWZsxIOj9ZHnMYmaz3IfpbsteXqaCVWku8EoixugCVIPHXWp2rY__Fml1DcMVeVVZ-TbYEmuzLcXUbmQd_GQj0lffQafSgob991A%3Dw1280" alt="KGN Trust Chairman">
-          <div><h3>Syed Adnan Moin Kazmi</h3><p class="role">Chairman</p><p>Present leadership of the Trust and its spiritual heritage, guiding welfare initiatives with dedication and integrity.</p></div>
-        </article>
-        <article class="leader reveal">
-          <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tvq96GSA0MNLNTktbvj8zLvBH2QQBWZK2yVAGayRx3EZKrkmpCzZ8-p-dQ0WhxrkWfh1iLy3vCXdnYuf_Yt9MQmLTowCY4CezpLOKXSSLAd8EqprkkGu_7Hqcm_L6Su5LmDUGVZ9ojFDh3AO_Pg55qHv8cLpNldl5RKoGiv16y2YukFj_24TzOOKfTq1MNGnoZ1JA13iFbRPqtL5RtzirjGE_maeI-Y_aME79NfxE%3Dw1280" alt="KGN Trust General Secretary">
-          <div><h3>Syed Rizwan Moin Kazmi</h3><p class="role">General Secretary</p><p>General Secretary shown on the Trust's current homepage and board listing.</p></div>
-        </article>
-        <article class="leader reveal">
-          <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72snrdoDqxMgwqoPt2p6kcRy6p1FgY6XbnlonV2r4nL1DBQ91ZnCGeVTeuBEasSjOzj2-L7YF1Uq7pmzN4FOADYUJfQGbg6dl5atdai8GhTY8DDQ_isBe-3bc3ygmhUWmONSOQ2tIjvqXPtSzlXfRW-HD_S3vsrawcZnhXKm4iNDLpKZRGLqQfXf4eUIks0z-kwx0aIT0jc3qwvniDYXEnThfpcAf_tl4DCo2M2x6yk%3Dw1280" alt="KGN Trust Karachi Office In-Charge">
-          <div><h3>Syed Muhammad Owais Gardazi</h3><p class="role">In-Charge Karachi Office</p><p>Listed on the Trust homepage as the In-Charge of the Karachi office.</p></div>
-        </article>
-      </div>
-      <div class="legacy-text glass reveal">
-        <h3>Our Noble Legacy</h3>
-        <p><strong>Founder & Spiritual Patriarch:</strong> Sajjada Nashin Hazrat Khwaja Moinuddin Khamis (R.A.) (Nabira Khwaja Gharib Nawaz R.A.), described by the Trust as a respected spiritual figure in Hyderabad, Sindh, associated with the Chishti order and public welfare efforts.</p>
-        <p><strong>Judicial, Legal & Spiritual Excellence:</strong> Sajjada Nashin Syed Muhammad Ahteshamuddin Kazmi (R.A.), described by the Trust as District & Sessions Judge / Nabira Khwaja Gharib Nawaz R.A.</p>
-        <p><strong>Legal Expertise & Generational Stewardship:</strong> Sajjada Nashin Syed Amir Moin Kazmi (R.A.), described by the Trust as Advocate High Court / Nabira Khwaja Gharib Nawaz R.A.</p>
-      </div>
-    </section>
-
-    <section id="projects" class="section section-dark">
-      <div class="section-heading reveal">
-        <p class="eyebrow">PROJECTS</p>
-        <h2>A long-term vision for education, healthcare and community development.</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project-card reveal"><span>EDUCATION</span><h3>Modern School of Technology</h3><p>Planned digital classrooms, STEM/Robotics lab, advanced computer labs, 3D printing studio, language lab, auditorium, sports facilities and an O-Level wing.</p></article>
-        <article class="project-card reveal"><span>HEALTHCARE</span><h3>Healthcare Complex</h3><p>The Trust's projects page describes a planned hospital with emergency care, OPD, wards, surgery, ICU/CCU, dialysis and diagnostic facilities.</p></article>
-        <article class="project-card reveal"><span>DIAGNOSTICS</span><h3>Advanced Diagnostic Center</h3><p>Planned automated pathology, microbiology and histopathology services with digital X-ray, ultrasound and CT imaging.</p></article>
-        <article class="project-card reveal"><span>AMBULANCE</span><h3>Ambulance Service</h3><p>The projects page describes a planned ambulance bay and service intended to support rapid emergency response.</p></article>
-      </div>
-    </section>
-
-    <section id="gallery" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">GALLERY</p>
-        <h2>Our work in action.</h2>
-        <p>Humanitarian aid distribution, food support, medical assistance, emergency relief, community development and volunteer activities.</p>
-      </div>
-      <div class="gallery-note glass reveal">
-        <div class="gallery-icon">✦</div>
-        <div>
-          <h3>Official Gallery</h3>
-          <p>The Trust's current gallery page presents its humanitarian work and commitment to dignity, privacy and transparency.</p>
-          <a class="text-link" href="https://www.kgntrust.org/gallery" target="_blank" rel="noopener">View official gallery →</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="donate" class="donate section">
-      <div class="donate-box reveal">
-        <div>
-          <p class="eyebrow">SUPPORT OUR HUMANITARIAN WORK</p>
-          <h2>Your support can help provide food, healthcare, education and emergency assistance.</h2>
-          <p>All donation details below are transcribed from the Trust's current official donation page. Please verify account details before publishing or transferring funds.</p>
-        </div>
-        <div class="bank">
-          <h3>Donation Account</h3>
-          <p><strong>Bank:</strong> Allied Bank Limited Pakistan</p>
-          <p><strong>Account Title:</strong> Khwajja Gharib Nawaz Trust</p>
-          <p><strong>IBAN:</strong> PK78ABPA0010154056840012</p>
-          <p><strong>Branch Code:</strong> 0433</p>
-          <a class="btn btn-primary" href="https://www.kgntrust.org/donate" target="_blank" rel="noopener">Official Donation Page</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact">
-      <div class="section-heading reveal"><p class="eyebrow">CONTACT</p><h2>Connect with KGN Trust.</h2></div>
-      <div class="contact-grid">
-        <div class="contact-card reveal"><h3>Head Office</h3><p>House 126, Block-E, Unit No. 6, Latifabad, Hyderabad, Sindh, Pakistan.</p><p>+92 313 3047929<br>+92 316 3122297</p></div>
-        <div class="contact-card reveal"><h3>Karachi Office</h3><p>Plot #62/R, Sector Z-6, Gulshan-e-Maimar, Karachi, Sindh, Pakistan.</p><p>+92 331 3196098</p></div>
-        <div class="contact-card reveal"><h3>Email</h3><p><a href="mailto:chairman@kgntrust.org">chairman@kgntrust.org</a><br><a href="mailto:info@kgntrust.org">info@kgntrust.org</a></p><a class="text-link" href="https://www.kgntrust.org/contact-us" target="_blank" rel="noopener">Official Contact Page →</a></div>
-      </div>
-    </section>
-  </main>
-
-  <a class="whatsapp" href="https://wa.me/923163122297" target="_blank" rel="noopener" aria-label="WhatsApp KGN Trust">WhatsApp</a>
-
-  <footer>
-    <div class="footer-inner">
-      <div><strong>KHWAJJA GHARIB NAWAZ TRUST</strong><p>Serving Humanity with Faith, Love & Compassion.</p></div>
-      <div><a href="#about">About</a><a href="#work">Work</a><a href="#projects">Projects</a><a href="#donate">Donate</a></div>
-      <small>© <span id="year"></span> KGN Trust. All Rights Reserved.</small>
+<main id="home">
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Humanitarian Welfare Trust</span>
+      <h1>Serving Humanity Through <span>Compassion</span>, Welfare & Social Responsibility.</h1>
+      <p class="lead">KGN Trust is a non-profit humanitarian welfare organization dedicated to supporting underprivileged communities through food assistance, healthcare support, education, and social welfare initiatives.</p>
+      <div class="actions"><a class="btn primary" href="#donate">Support Our Work</a><a class="btn ghost" href="#about">Discover KGN Trust</a></div>
+      <div class="mini-points"><span>✓ Food Assistance</span><span>✓ Medical Support</span><span>✓ Education Aid</span></div>
     </div>
-  </footer>
+    <div class="hero-art reveal">
+      <div class="orb"><div class="orb-ring r1"></div><div class="orb-ring r2"></div><div class="orb-core">KGN</div></div>
+      <div class="floating-card c1">Compassion<br><b>In Action</b></div>
+      <div class="floating-card c2">Faith • Love • Service</div>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section class="ticker"><div>KHWAJJA GHARIB NAWAZ TRUST</div><div>Serving Humanity with Faith, Love & Compassion</div><div>Humanitarian Welfare • Community Support • Social Responsibility</div></section>
+
+<section id="about" class="section">
+<div class="container">
+  <div class="section-head reveal"><span class="eyebrow">About Us</span><h2>Who We Are</h2></div>
+  <div class="about-grid">
+    <div class="about-image reveal"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vbG4A12DAeufkC_BWeSHZKWp59WfxzN0-DjpwQUhsjDUWbYUBS-RC_8G4P7DJde2aYd9j6na80nPeonaSuluxNh5lnEBDYgy_WoQzN63lmeoSGI1ZEMrwYtEsi8VifxITjWX9wyf_i3baCy_tWXPSRym8d0e_jSw7VwaQNPgFRtexsJOzuftQV0PnBE5w=w16383" alt="KGN Trust community image" loading="lazy"></div>
+    <div class="about-copy reveal">
+      <p>KGN Trust works to improve the lives of vulnerable individuals and families by providing essential humanitarian support.</p>
+      <p>We focus on dignity, transparency, and compassion while serving communities regardless of religion, background, or ethnicity.</p>
+      <div class="quote">“Serving humanity through compassion, welfare, and social responsibility.”</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="work" class="section alt">
+<div class="container">
+  <div class="section-head reveal"><span class="eyebrow">What We Do</span><h2>Practical support for people and communities</h2></div>
+  <div class="cards">
+    <article class="card reveal"><div class="icon">1</div><h3>Food Assistance & Community Feeding, Langer Programs</h3><p>Food support and community feeding initiatives for people facing hardship.</p></article><article class="card reveal"><div class="icon">2</div><h3>Medical Aid & Health Support Initiatives</h3><p>Medical assistance and basic health support for vulnerable communities.</p></article><article class="card reveal"><div class="icon">3</div><h3>Free Medical Camps & Basic Health Awareness</h3><p>Community-focused medical camps and health awareness activities.</p></article><article class="card reveal"><div class="icon">4</div><h3>Support for Orphans and Widows</h3><p>Humanitarian support for vulnerable families, including orphans and widows.</p></article><article class="card reveal"><div class="icon">5</div><h3>Education Assistance & School Support Programs</h3><p>Education assistance and support for deserving students and schools.</p></article><article class="card reveal"><div class="icon">6</div><h3>Emergency & Disaster Relief Activities</h3><p>Relief support during emergencies and difficult circumstances.</p></article><article class="card reveal"><div class="icon">7</div><h3>Winter Relief</h3><p>Blankets and clothing distribution for people in need during winter.</p></article><article class="card reveal"><div class="icon">8</div><h3>Clean Water & Basic Sanitation Support</h3><p>Support focused on clean drinking water and basic sanitation.</p></article><article class="card reveal"><div class="icon">9</div><h3>Support for Underprivileged Families</h3><p>Practical assistance for families facing financial and social hardship.</p></article><article class="card reveal"><div class="icon">10</div><h3>Community Welfare & Social Support Services</h3><p>Community welfare and social support programs aimed at dignity and inclusion.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="leadership" class="section">
+<div class="container">
+  <div class="section-head reveal"><span class="eyebrow">Leadership</span><h2>Board of Trustees</h2></div>
+  <div class="leaders">
+    <article class="leader reveal"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tWpZI0kS2Z_3LfP7ijeCJED12MXhKh6CS-hNG7fmU3JDi6fenuxi1ewQ-usAhnb97x1Qiu3Iyqy07gwH4FDyLn_lJEbewxuBQdNQifEs7KNnCg5T6VmpAYRDcW2uaRXZ06KNvGI2JTCJyYOEHvYMdNU9yipuvShmwPTE_APm92ugmqJ8DLPSJFynn-=w16383" alt="Syed Adnan Moin Kazmi" loading="lazy"><h3>Syed Adnan Moin Kazmi</h3><span>Chairman</span></article>
+    <article class="leader reveal"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vg9tGGobbVcQVAu3mq6OCMf77dpA8Dv7kQjLRja6YTdxup8tWwplJKD8Gc-ob4kHEi6-vxyvQEwk7TmmPMC7UcwZsSSGLpD8m37X6maw-7oMp2_rvv8OXEaTg5FqY_g3AuPDb8YsAoY_tonPklBJVGZsvFQMROB6NNRd7wvgNsggB2rIAdZ9CrN2qX=w16383" alt="Syed Rizwan Moin Kazmi" loading="lazy"><h3>Syed Rizwan Moin Kazmi</h3><span>General Secretary</span></article>
+    <article class="leader reveal"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72t-hoJmsl4KbO55AANextET9P5QReKSX4P3ub4DLFrO5wOO5UF0iVJRl0f9SukssL8YGXwtJfT8CsyWn7ycvHvSD-WwKgWVpg9G4O4NMbS8eyiX_p85YuMaJLJbYAjezQ4DEV4ywvGjM6gBWJ9QBvF4n4hoIOAXHBcZAWURHJJ7rnOHB6GXu-VVR0aG0iA=w16383" alt="Syed Muhammad Owais Gardazi" loading="lazy"><h3>Syed Muhammad Owais Gardazi</h3><span>In-Charge Karachi Office</span></article>
+  </div>
+</div>
+</section>
+
+<section id="projects" class="section alt">
+<div class="container">
+  <div class="section-head reveal"><span class="eyebrow">Our Projects</span><h2>Building a future of education, healthcare & community welfare</h2><p>The project material below follows the content supplied from the Trust's project page.</p></div>
+  <div class="project-feature reveal">
+    <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72u16QS_SrSTe1-ZbocUvoLA1ravrSUETVyPPD5FhZ7lp7ot6-MkSfBgfoGpqmOXCcs3g08ro2jlmu-kxI13wnoWajspqc8yIvZrJp1qF_RyIwRX1Qv1LKbr4lURkVe3S5j1xMKXRbYt7-82ZEIMW9M66otQ0lLVwCxNowFx4PVNxwwIXQ1qcebc-gNAUqM=w16383" alt="KGN Trust project" loading="lazy">
+    <div><span class="tag">Project Vision & Objectives</span><h3>Integrated, self-sustaining community development</h3>
+    <p>The project vision describes an integrated self-sustaining township combining high-quality education, vocational training, healthcare, community and spiritual wellbeing, staff housing, and sustainability/green initiatives.</p></div>
+  </div>
+  <div class="project-grid">
+    <article class="project reveal"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72sVJJ8Z1u9zd9WFQ5uBRalMyHTVDaWs3mEwJD52u4xSMsr6RTl3vNPD0ElN0bL8F8hfpW77BvENmGrblzZJduqRz8BKoAdrP5imk8PTabi0bRSXlVpYA8d5m7H35Pcb0jC3WK_rKExLRF0dibUSKBjeC4yn9MHR8RP45KHXEMpM2EZaCk7Dn_ApwGCY=w16383" alt="School project" loading="lazy"><div><span class="tag">Education</span><h3>Modern School of Technology</h3><p>Planned facilities include digital classrooms, STEM/Robotics lab, advanced computer labs, 3D printing studio, language lab, auditorium, sports ground, basketball court, cafeteria and an O-Level wing.</p></div></article>
+    <article class="project reveal"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72seWPsU5CyvDI44GqNfpk6nEfePzi_m_aCVtAl8WsqVzAM_gy2lAQNNSBkIQ8QH6i6u5SO3SLz3Yv4-a3nWi6ESQwumJUxzHdCTDYpvjfyt1L4OV6fbl8JwqJqsSlkgnhf2vugbOnOv9JP5kuj4GMKahAyry3AD-w8m6qhVb5Q7KNnOO20Ysp4xC_YT=w16383" alt="Healthcare project" loading="lazy"><div><span class="tag">Healthcare</span><h3>Healthcare Complex</h3><p>The supplied project content describes a charitable hospital with emergency services, OPD, wards, operating theaters, maternity, laboratory, pharmacy and imaging, with advanced diagnostic and critical-care facilities.</p></div></article>
+    <article class="project reveal"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72t8-Sb5FIrB8F-7DZdMMS8c8ge6m_0ce7ETzWPFeOn7rGsYNOg-uGWEDk5d_oJglYvrkmhfa-yQSlI31eRn6IpsTTg_vw2YgXwWpXO3SbsrThAZm08JJb3mvdt8pKkwJpnnH22ozgOZ-NGM3vc40Zvzyp_5lI7tDm9-me9mHwlKVuTWqgjz-nXCsGQ1=w16383" alt="Diagnostic center project" loading="lazy"><div><span class="tag">Diagnostics</span><h3>Advanced Diagnostic Lab</h3><p>Planned diagnostic services include automated blood, pathology, microbiology and histopathology, plus digital X-ray, ultrasound and CT with digital reporting.</p></div></article>
+    <article class="project reveal"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72u_CmPGD7CwV1QoPeeQcxWRA4WxO6yfpeH3viNOdU13xdb78--6h0JZYaBh37OOcf9sOFoVHLKA_U8TRMjeOIl6FPUpGDNZlPo25RDWP0kSQXP-EV0yO3LFXtR3C79A9794F1kIRjxpriSWz5k2F8YwhzLcTXXk55kJwTKQap1sdyTkJG2xEuxDiW7R8TA=w16383" alt="Ambulance project" loading="lazy"><div><span class="tag">Emergency Support</span><h3>Advanced Ambulance Bay & Parking</h3><p>The project material describes an ambulance service, parking for 20 ambulances, including 5 ALS and 15 BLS, plus workshop and staff facilities.</p></div></article>
+  </div>
+</div>
+</section>
+
+<section id="gallery" class="section">
+<div class="container">
+  <div class="section-head reveal"><span class="eyebrow">Gallery</span><h2>Moments of service</h2><p>Images below are linked to the original Google-hosted image sources found in the saved KGN Trust homepage.</p></div>
+  <div class="gallery">
+    <a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vbG4A12DAeufkC_BWeSHZKWp59WfxzN0-DjpwQUhsjDUWbYUBS-RC_8G4P7DJde2aYd9j6na80nPeonaSuluxNh5lnEBDYgy_WoQzN63lmeoSGI1ZEMrwYtEsi8VifxITjWX9wyf_i3baCy_tWXPSRym8d0e_jSw7VwaQNPgFRtexsJOzuftQV0PnBE5w=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vbG4A12DAeufkC_BWeSHZKWp59WfxzN0-DjpwQUhsjDUWbYUBS-RC_8G4P7DJde2aYd9j6na80nPeonaSuluxNh5lnEBDYgy_WoQzN63lmeoSGI1ZEMrwYtEsi8VifxITjWX9wyf_i3baCy_tWXPSRym8d0e_jSw7VwaQNPgFRtexsJOzuftQV0PnBE5w=w16383" alt="KGN Trust gallery image 1" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tWpZI0kS2Z_3LfP7ijeCJED12MXhKh6CS-hNG7fmU3JDi6fenuxi1ewQ-usAhnb97x1Qiu3Iyqy07gwH4FDyLn_lJEbewxuBQdNQifEs7KNnCg5T6VmpAYRDcW2uaRXZ06KNvGI2JTCJyYOEHvYMdNU9yipuvShmwPTE_APm92ugmqJ8DLPSJFynn-=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tWpZI0kS2Z_3LfP7ijeCJED12MXhKh6CS-hNG7fmU3JDi6fenuxi1ewQ-usAhnb97x1Qiu3Iyqy07gwH4FDyLn_lJEbewxuBQdNQifEs7KNnCg5T6VmpAYRDcW2uaRXZ06KNvGI2JTCJyYOEHvYMdNU9yipuvShmwPTE_APm92ugmqJ8DLPSJFynn-=w16383" alt="KGN Trust gallery image 2" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vg9tGGobbVcQVAu3mq6OCMf77dpA8Dv7kQjLRja6YTdxup8tWwplJKD8Gc-ob4kHEi6-vxyvQEwk7TmmPMC7UcwZsSSGLpD8m37X6maw-7oMp2_rvv8OXEaTg5FqY_g3AuPDb8YsAoY_tonPklBJVGZsvFQMROB6NNRd7wvgNsggB2rIAdZ9CrN2qX=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vg9tGGobbVcQVAu3mq6OCMf77dpA8Dv7kQjLRja6YTdxup8tWwplJKD8Gc-ob4kHEi6-vxyvQEwk7TmmPMC7UcwZsSSGLpD8m37X6maw-7oMp2_rvv8OXEaTg5FqY_g3AuPDb8YsAoY_tonPklBJVGZsvFQMROB6NNRd7wvgNsggB2rIAdZ9CrN2qX=w16383" alt="KGN Trust gallery image 3" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72t-hoJmsl4KbO55AANextET9P5QReKSX4P3ub4DLFrO5wOO5UF0iVJRl0f9SukssL8YGXwtJfT8CsyWn7ycvHvSD-WwKgWVpg9G4O4NMbS8eyiX_p85YuMaJLJbYAjezQ4DEV4ywvGjM6gBWJ9QBvF4n4hoIOAXHBcZAWURHJJ7rnOHB6GXu-VVR0aG0iA=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72t-hoJmsl4KbO55AANextET9P5QReKSX4P3ub4DLFrO5wOO5UF0iVJRl0f9SukssL8YGXwtJfT8CsyWn7ycvHvSD-WwKgWVpg9G4O4NMbS8eyiX_p85YuMaJLJbYAjezQ4DEV4ywvGjM6gBWJ9QBvF4n4hoIOAXHBcZAWURHJJ7rnOHB6GXu-VVR0aG0iA=w16383" alt="KGN Trust gallery image 4" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72u16QS_SrSTe1-ZbocUvoLA1ravrSUETVyPPD5FhZ7lp7ot6-MkSfBgfoGpqmOXCcs3g08ro2jlmu-kxI13wnoWajspqc8yIvZrJp1qF_RyIwRX1Qv1LKbr4lURkVe3S5j1xMKXRbYt7-82ZEIMW9M66otQ0lLVwCxNowFx4PVNxwwIXQ1qcebc-gNAUqM=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72u16QS_SrSTe1-ZbocUvoLA1ravrSUETVyPPD5FhZ7lp7ot6-MkSfBgfoGpqmOXCcs3g08ro2jlmu-kxI13wnoWajspqc8yIvZrJp1qF_RyIwRX1Qv1LKbr4lURkVe3S5j1xMKXRbYt7-82ZEIMW9M66otQ0lLVwCxNowFx4PVNxwwIXQ1qcebc-gNAUqM=w16383" alt="KGN Trust gallery image 5" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72sVJJ8Z1u9zd9WFQ5uBRalMyHTVDaWs3mEwJD52u4xSMsr6RTl3vNPD0ElN0bL8F8hfpW77BvENmGrblzZJduqRz8BKoAdrP5imk8PTabi0bRSXlVpYA8d5m7H35Pcb0jC3WK_rKExLRF0dibUSKBjeC4yn9MHR8RP45KHXEMpM2EZaCk7Dn_ApwGCY=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72sVJJ8Z1u9zd9WFQ5uBRalMyHTVDaWs3mEwJD52u4xSMsr6RTl3vNPD0ElN0bL8F8hfpW77BvENmGrblzZJduqRz8BKoAdrP5imk8PTabi0bRSXlVpYA8d5m7H35Pcb0jC3WK_rKExLRF0dibUSKBjeC4yn9MHR8RP45KHXEMpM2EZaCk7Dn_ApwGCY=w16383" alt="KGN Trust gallery image 6" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72seWPsU5CyvDI44GqNfpk6nEfePzi_m_aCVtAl8WsqVzAM_gy2lAQNNSBkIQ8QH6i6u5SO3SLz3Yv4-a3nWi6ESQwumJUxzHdCTDYpvjfyt1L4OV6fbl8JwqJqsSlkgnhf2vugbOnOv9JP5kuj4GMKahAyry3AD-w8m6qhVb5Q7KNnOO20Ysp4xC_YT=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72seWPsU5CyvDI44GqNfpk6nEfePzi_m_aCVtAl8WsqVzAM_gy2lAQNNSBkIQ8QH6i6u5SO3SLz3Yv4-a3nWi6ESQwumJUxzHdCTDYpvjfyt1L4OV6fbl8JwqJqsSlkgnhf2vugbOnOv9JP5kuj4GMKahAyry3AD-w8m6qhVb5Q7KNnOO20Ysp4xC_YT=w16383" alt="KGN Trust gallery image 7" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72t8-Sb5FIrB8F-7DZdMMS8c8ge6m_0ce7ETzWPFeOn7rGsYNOg-uGWEDk5d_oJglYvrkmhfa-yQSlI31eRn6IpsTTg_vw2YgXwWpXO3SbsrThAZm08JJb3mvdt8pKkwJpnnH22ozgOZ-NGM3vc40Zvzyp_5lI7tDm9-me9mHwlKVuTWqgjz-nXCsGQ1=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72t8-Sb5FIrB8F-7DZdMMS8c8ge6m_0ce7ETzWPFeOn7rGsYNOg-uGWEDk5d_oJglYvrkmhfa-yQSlI31eRn6IpsTTg_vw2YgXwWpXO3SbsrThAZm08JJb3mvdt8pKkwJpnnH22ozgOZ-NGM3vc40Zvzyp_5lI7tDm9-me9mHwlKVuTWqgjz-nXCsGQ1=w16383" alt="KGN Trust gallery image 8" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72u_CmPGD7CwV1QoPeeQcxWRA4WxO6yfpeH3viNOdU13xdb78--6h0JZYaBh37OOcf9sOFoVHLKA_U8TRMjeOIl6FPUpGDNZlPo25RDWP0kSQXP-EV0yO3LFXtR3C79A9794F1kIRjxpriSWz5k2F8YwhzLcTXXk55kJwTKQap1sdyTkJG2xEuxDiW7R8TA=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72u_CmPGD7CwV1QoPeeQcxWRA4WxO6yfpeH3viNOdU13xdb78--6h0JZYaBh37OOcf9sOFoVHLKA_U8TRMjeOIl6FPUpGDNZlPo25RDWP0kSQXP-EV0yO3LFXtR3C79A9794F1kIRjxpriSWz5k2F8YwhzLcTXXk55kJwTKQap1sdyTkJG2xEuxDiW7R8TA=w16383" alt="KGN Trust gallery image 9" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tLi2ZWkaQfDKI6i-H64Jeqg6rev0xYb2Jj0PEXlrAbcS77xkUEB0QYMqGCZn4dCuOBAxG38GmIQ7xTxqYyxMQLn05VQJeQ_JfSgK81DPHbULA4Oqf_ffCkjuj933AB8vCZzPX39bwiX0Igzp8s9VUXIvfuhfQv33__6dLDH4WI4CSc7dYRrJnXtQ=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tLi2ZWkaQfDKI6i-H64Jeqg6rev0xYb2Jj0PEXlrAbcS77xkUEB0QYMqGCZn4dCuOBAxG38GmIQ7xTxqYyxMQLn05VQJeQ_JfSgK81DPHbULA4Oqf_ffCkjuj933AB8vCZzPX39bwiX0Igzp8s9VUXIvfuhfQv33__6dLDH4WI4CSc7dYRrJnXtQ=w16383" alt="KGN Trust gallery image 10" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vfaHg5SvPWz7CRot1G7X0gr0UHWRf1fty2CQK2vpsZbT5b7jrNXKPUj-u4P9n2Q7yjzZh2_YFbNXThXzc2Y85tgMgsoW90Zm6zAI7yNEOapAarX7IIOiK3gZd494J31gJF7enZc0VDWsy7-ZuAVZg0j3WjeFPUOHTvejH944hYMPqdlMlbMmkhnmLsFUc=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vfaHg5SvPWz7CRot1G7X0gr0UHWRf1fty2CQK2vpsZbT5b7jrNXKPUj-u4P9n2Q7yjzZh2_YFbNXThXzc2Y85tgMgsoW90Zm6zAI7yNEOapAarX7IIOiK3gZd494J31gJF7enZc0VDWsy7-ZuAVZg0j3WjeFPUOHTvejH944hYMPqdlMlbMmkhnmLsFUc=w16383" alt="KGN Trust gallery image 11" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72svrMxpz6uEmQ-hjgC5pMRdBZnpZIDQ8AGSAIz0wH3_0HEhCcP846VFhHgal3CNpe3_qEZruHhXOtn3VEhChmCD9OLAPB9iO7TNCeqCeXsWQFGiUaqTrlmLnWmduZCBGTrysX3sFrKZ_e74Gte2JvHV_PWoW9SDIJZru585FHc4SrhMMCdBtWcRaMb0VFs=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72svrMxpz6uEmQ-hjgC5pMRdBZnpZIDQ8AGSAIz0wH3_0HEhCcP846VFhHgal3CNpe3_qEZruHhXOtn3VEhChmCD9OLAPB9iO7TNCeqCeXsWQFGiUaqTrlmLnWmduZCBGTrysX3sFrKZ_e74Gte2JvHV_PWoW9SDIJZru585FHc4SrhMMCdBtWcRaMb0VFs=w16383" alt="KGN Trust gallery image 12" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72smSzs3f8w9jxAxtoE6wMAcxBlkepCNHps54AsVXaw-79Br0osn35yTJNxtpnOa0ZbMcpn99IC6cO8PJilfNBS0wquWqnmyN6g3KqEkHLMXZLc3QrwAN5xYtPXr6Ha0DKM_u1xbmV4pMObOu2vhFhL-M6EB_WdfD1mxyXn31bgxaS6Qgl5ny9yhu9iRF8M=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72smSzs3f8w9jxAxtoE6wMAcxBlkepCNHps54AsVXaw-79Br0osn35yTJNxtpnOa0ZbMcpn99IC6cO8PJilfNBS0wquWqnmyN6g3KqEkHLMXZLc3QrwAN5xYtPXr6Ha0DKM_u1xbmV4pMObOu2vhFhL-M6EB_WdfD1mxyXn31bgxaS6Qgl5ny9yhu9iRF8M=w16383" alt="KGN Trust gallery image 13" loading="lazy"></a><a class="gallery-item reveal" href="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vonCWfTKqJ7z1aylYTb2LTeP6iCSVnIgCM9XV90kajEFo02eMroSJkvbt89Wuu7s0yIgBXs1djtWpO8UwbhyBF84FvIDRvRiFF_mAPR0ZqzoHD6MOlBcV5zgbcQhlGKIbRb5DOVpgilMFv0ySXQ4lHA8ZsXMdMliThpJpFM5ZYXuZ_o51uNuuxBJzylN0=w16383" target="_blank" rel="noopener"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vonCWfTKqJ7z1aylYTb2LTeP6iCSVnIgCM9XV90kajEFo02eMroSJkvbt89Wuu7s0yIgBXs1djtWpO8UwbhyBF84FvIDRvRiFF_mAPR0ZqzoHD6MOlBcV5zgbcQhlGKIbRb5DOVpgilMFv0ySXQ4lHA8ZsXMdMliThpJpFM5ZYXuZ_o51uNuuxBJzylN0=w16383" alt="KGN Trust gallery image 14" loading="lazy"></a>
+  </div>
+</div>
+</section>
+
+<section id="donate" class="section donate-section">
+<div class="container donate-box reveal">
+  <div><span class="eyebrow">Support Our Humanitarian Work</span><h2>Your support can help provide essential assistance.</h2><p>Your donation helps provide food, healthcare, education, and emergency support to individuals and families in need. All donations are used for humanitarian welfare purposes only.</p></div>
+  <a class="btn primary big" href="https://www.kgntrust.org/donate" target="_blank" rel="noopener">Donate Now</a>
+</div>
+</section>
+
+<section id="contact" class="section contact">
+<div class="container">
+  <div class="section-head"><span class="eyebrow">Contact</span><h2>Connect with KGN Trust</h2></div>
+  <div class="contact-grid">
+    <div><h3>Head Office</h3><p>House: 126, Block-E, Unit No. 6, Latifabad, Hyderabad, Sindh, Pakistan.</p><p>📞 +923133047929<br>+923163122297</p></div>
+    <div><h3>Karachi Office</h3><p>Plot #62/R, Sector Z-6, Gulshan-e-Maimar, Karachi, Sindh, Pakistan.</p><p>📞 +923313196098</p></div>
+    <div><h3>Email</h3><p><a href="mailto:chairman@kgntrust.org">chairman@kgntrust.org</a><br><a href="mailto:info@kgntrust.org">info@kgntrust.org</a></p><p><a href="https://www.kgntrust.org" target="_blank" rel="noopener">www.kgntrust.org</a></p></div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer><div class="container footer-wrap"><div><b>KHWAJJA GHARIB NAWAZ TRUST</b><p>Serving Humanity with Faith, Love & Compassion</p></div><div>© <span id="year"></span> KGN Trust | All Rights Reserved</div></div></footer>
+<a class="whatsapp" href="https://wa.me/923163122297" target="_blank" rel="noopener" aria-label="WhatsApp">☏</a>
+<script src="script.js"></script>
 </body>
 </html>
