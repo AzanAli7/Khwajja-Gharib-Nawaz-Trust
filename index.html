@@ -1,85 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#071b14">
-  <title>Khwajja Gharib Nawaz Trust | Serving Humanity</title>
-  <meta name="description" content="Khwajja Gharib Nawaz Trust — a modern fictional humanitarian website demo.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Khwaja Gharib Nawaz Trust — Humanitarian Welfare Trust">
+  <title>Khwaja Gharib Nawaz Trust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="progress"></div>
+
   <header class="site-header">
-    <a class="brand" href="#home"><span class="brand-mark">KGN</span><span><b>Khwajja Gharib Nawaz</b><small>TRUST • SERVING HUMANITY</small></span></a>
-    <button class="menu" aria-label="Open menu">☰</button>
-    <nav>
-      <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a>
-      <a href="#impact">Impact</a><a href="#gallery">Gallery</a><a class="nav-donate" href="#donate">Donate</a>
+    <a class="brand" href="#home" aria-label="KGN Trust home">
+      <span class="brand-mark">KGN</span>
+      <span><strong>Khwaja Gharib Nawaz</strong><small>Humanitarian Welfare Trust</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Our Work</a>
+      <a href="#legacy">Legacy</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#donate" class="nav-donate">Donate</a>
     </nav>
   </header>
 
-  <main id="home">
-    <section class="hero">
-      <div class="orb orb1"></div><div class="orb orb2"></div>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
       <div class="hero-copy reveal">
-        <p class="eyebrow">COMPASSION • DIGNITY • SERVICE</p>
-        <h1>Small acts.<br><span>Lasting impact.</span></h1>
-        <p class="lead">Building brighter communities through education, clean water, food support and sustainable humanitarian projects.</p>
-        <div class="actions"><a class="btn primary" href="#donate">Support the Mission <span>→</span></a><a class="btn ghost" href="#projects">Explore Projects</a></div>
-        <div class="trust-row"><span>✓ Transparent</span><span>✓ Community focused</span><span>✓ Built for impact</span></div>
+        <p class="eyebrow">KHWAJA GHARIB NAWAZ TRUST</p>
+        <h1>Serving humanity with <span>compassion, dignity &amp; care.</span></h1>
+        <p class="hero-text">A humanitarian welfare trust working to support vulnerable communities through food, healthcare, education, community welfare and empowerment initiatives.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#donate">Support Our Work</a>
+          <a class="btn btn-ghost" href="#about">Discover Our Story</a>
+        </div>
       </div>
-      <div class="hero-visual reveal">
-        <div class="globe">
-          <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
-          <div class="core"><span>KGN</span><small>HOPE IN ACTION</small></div>
-          <i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i>
+
+      <div class="hero-orbit reveal">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="orbit-core">
+          <span>KGN</span>
+          <small>TRUST</small>
         </div>
       </div>
     </section>
 
-    <section class="ticker"><div>EDUCATION</div><div>WATER</div><div>FOOD</div><div>HEALTH</div><div>COMMUNITY</div><div>EMPOWERMENT</div></section>
-
-    <section id="about" class="section split">
-      <div class="reveal"><p class="eyebrow">WHO WE ARE</p><h2>Serving people with <span>purpose.</span></h2></div>
-      <div class="reveal"><p>Our mission is to connect compassion with practical action. This fictional demo website presents a digital home for Khwajja Gharib Nawaz Trust and its community initiatives.</p><p>From essential support to long-term development, every project is designed around dignity, transparency and measurable impact.</p></div>
+    <section class="stats">
+      <div><strong>Food</strong><span>Assistance</span></div>
+      <div><strong>Health</strong><span>Support</span></div>
+      <div><strong>Education</strong><span>Assistance</span></div>
+      <div><strong>Community</strong><span>Welfare</span></div>
     </section>
 
-    <section id="projects" class="section dark-section">
-      <div class="section-head reveal"><div><p class="eyebrow">OUR WORK</p><h2>Projects that <span>matter.</span></h2></div><p>Focused programs. Real stories. Human outcomes.</p></div>
+    <section id="about" class="section about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">WHO WE ARE</p>
+        <h2>About Us</h2>
+        <p class="lead">Khwaja Gharib Nawaz Trust is a non-profit humanitarian welfare organization dedicated to serving humanity with compassion, dignity, and social responsibility.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="glass-card reveal">
+          <h3>Our Purpose</h3>
+          <p>Khwaja Gharib Nawaz Trust is a non-profit humanitarian welfare organization dedicated to serving humanity with compassion, dignity, and social responsibility. Inspired by the values of service, generosity, and care for the underprivileged, the Trust works to uplift vulnerable communities through welfare and relief initiatives.</p>
+          <p>Our mission is centered on supporting individuals and families in need by addressing essential human needs such as food security, healthcare support, education assistance, and community welfare, while promoting values of harmony, compassion, and social well-being.</p>
+          <p>Alongside our humanitarian work, the Trust also preserves cultural and spiritual traditions as part of its community engagement activities. These initiatives are conducted with the aim of fostering unity, peace, and mutual respect within society.</p>
+          <p>Khwaja Gharib Nawaz Trust is a registered welfare organization committed to improving lives across Pakistan. Our work reflects the timeless principle of <strong>Khidmat-e-Khalq (service to humanity)</strong> by providing inclusive support without discrimination.</p>
+        </article>
+
+        <aside class="vision-card reveal">
+          <span class="card-icon">✦</span>
+          <h3>Our Vision</h3>
+          <p>To build a society where every individual has access to basic necessities, lives with dignity, and receives support during times of hardship, while communities remain connected through shared values of compassion and harmony.</p>
+        </aside>
+      </div>
+
+      <div class="mission-box reveal">
+        <div>
+          <p class="eyebrow">OUR MISSION</p>
+          <h3>Turning compassion into meaningful community support.</h3>
+        </div>
+        <ul>
+          <li>To serve humanity with sincerity, transparency, and accountability.</li>
+          <li>To provide sustainable welfare programs for underprivileged communities.</li>
+          <li>To promote social harmony and community well-being.</li>
+          <li>To support food security, healthcare, and education initiatives.</li>
+          <li>To encourage community engagement through ethical and responsible practices.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="legacy" class="section legacy">
+      <div class="section-heading reveal">
+        <p class="eyebrow">OUR NOBLE LEGACY &amp; LEADERSHIP</p>
+        <h2>A tradition of service and stewardship</h2>
+        <p class="lead">The Trust describes its legacy as rooted in justice, spirituality, education and selfless service to humanity.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <span class="timeline-number">01</span>
+          <div><h3>Founder &amp; Spiritual Patriarch</h3><p>The roots of this humanitarian mission trace back to the family’s ancestor, Sajjada Nashin Hazrat Khwaja Moinuddin Khamis (R.A.) (Nabira Khwaja Gharib Nawaz R.A.), a widely respected spiritual figure in Hyderabad, Sindh. Alongside spreading the message of the Chishti order, he initiated numerous public welfare efforts during his lifetime.</p></div>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-number">02</span>
+          <div><h3>Judicial, Legal &amp; Spiritual Excellence</h3><p>This noble legacy was carried forward by his son, Sajjada Nashin Syed Muhammad Ahteshamuddin Kazmi (R.A.) (District &amp; Sessions Judge / Nabira Khwaja Gharib Nawaz R.A.). While holding a revered spiritual position in the Chishti order, he served the judiciary with utmost integrity as a District &amp; Sessions Judge until his passing during active service.</p></div>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-number">03</span>
+          <div><h3>Legal Expertise &amp; Generational Stewardship</h3><p>Following his father's passing, his eldest son, Sajjada Nashin Syed Amir Moin Kazmi (R.A.) (Advocate High Court / Nabira Khwaja Gharib Nawaz R.A.), assumed the seat of Sajjadagi, preserving the family’s dignity, legal acumen, and commitment to public welfare.</p></div>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-number">04</span>
+          <div><h3>Present Leadership</h3><p>Today, the Trust and its spiritual heritage are led by his brother, Sajjada Nashin Pir Syed Adnan Mueen Kazmi (Current Chairman / Nabira Khwaja Gharib Nawaz R.A.). As a prominent spiritual leader of the Chishti order in Hyderabad, he continues to guide the Trust's welfare initiatives with complete transparency, dedication, and integrity.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="work" class="section work">
+      <div class="section-heading reveal">
+        <p class="eyebrow">OUR WORK &amp; ACTIVITIES</p>
+        <h2>Where compassion becomes action</h2>
+      </div>
       <div class="cards">
-        <article class="card reveal"><div class="icon">💧</div><h3>Clean Water</h3><p>Water access initiatives designed to support families and communities.</p><a href="#donate">Support →</a></article>
-        <article class="card reveal"><div class="icon">📚</div><h3>Education</h3><p>Learning opportunities, resources and community education programs.</p><a href="#donate">Support →</a></article>
-        <article class="card reveal"><div class="icon">🍲</div><h3>Food Support</h3><p>Food assistance campaigns for families facing difficult circumstances.</p><a href="#donate">Support →</a></article>
-        <article class="card reveal"><div class="icon">🤝</div><h3>Community</h3><p>Local initiatives that strengthen resilience and opportunity.</p><a href="#donate">Support →</a></article>
+        <article class="work-card reveal"><span>01</span><h3>Humanitarian Welfare Programs</h3><p><strong>Food Assistance:</strong> Daily rations, cooked meals, and community food distribution programs.</p><p><strong>Health Support:</strong> Medical aid, health awareness, and emergency medical assistance.</p><p><strong>Education Support:</strong> Assistance for orphans and deserving students.</p><p><strong>Community Development:</strong> Clean drinking water initiatives and seasonal welfare campaigns.</p></article>
+        <article class="work-card reveal"><span>02</span><h3>Community &amp; Cultural Engagement</h3><p>As part of our community outreach, the Trust facilitates cultural and social gatherings aimed at promoting peace, unity, and social values. These activities are conducted alongside welfare efforts and include community meals and public participation initiatives that encourage inclusiveness and social cohesion.</p></article>
+        <article class="work-card reveal"><span>03</span><h3>Women Empowerment &amp; Self-Reliance</h3><p>Khwaja Gharib Nawaz Trust is dedicated to empowering women by fostering financial independence and self-reliance. We provide deserving women with the essential skill training, resources, and guidance needed to earn a dignified income from home or establish their own small businesses.</p><p>Through tailored support and vocational initiatives, we enable women to become economically self-sufficient, support their families, and lead with dignity.</p></article>
       </div>
     </section>
 
-    <section id="impact" class="section impact">
-      <div class="section-head reveal"><div><p class="eyebrow">IMPACT</p><h2>Every contribution <span>counts.</span></h2></div></div>
-      <div class="stats">
-        <div class="stat reveal"><strong data-count="1200">0</strong><span>Families reached</span></div>
-        <div class="stat reveal"><strong data-count="48">0</strong><span>Community projects</span></div>
-        <div class="stat reveal"><strong data-count="16">0</strong><span>Education initiatives</span></div>
-        <div class="stat reveal"><strong data-count="25">0</strong><span>Water projects</span></div>
+    <section class="why section">
+      <div class="why-inner reveal">
+        <p class="eyebrow">WHY WE EXIST</p>
+        <h2>Hope grows when people stand together.</h2>
+        <p>We believe that supporting basic human needs is a shared responsibility. By focusing on welfare, compassion, and community support, Khwaja Gharib Nawaz Trust works to improve lives, strengthen communities, and provide hope to those in need.</p>
       </div>
     </section>
 
-    <section id="gallery" class="section">
-      <div class="section-head reveal"><div><p class="eyebrow">GALLERY</p><h2>Moments of <span>hope.</span></h2></div><p>Replace these demo panels with your own photographs anytime.</p></div>
-      <div class="gallery"><div class="g g1">COMMUNITY</div><div class="g g2">EDUCATION</div><div class="g g3">WATER</div><div class="g g4">FOOD</div><div class="g g5">TOGETHER</div></div>
+    <section id="gallery" class="section gallery">
+      <div class="section-heading reveal">
+        <p class="eyebrow">OUR GALLERY</p>
+        <h2>Moments of service</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-tile t1"><span>Humanitarian Aid</span></div>
+        <div class="gallery-tile t2"><span>Community Meals</span></div>
+        <div class="gallery-tile t3"><span>Medical Support</span></div>
+        <div class="gallery-tile t4"><span>Community Welfare</span></div>
+      </div>
     </section>
 
     <section id="donate" class="section donate">
-      <div class="donate-box reveal">
-        <div><p class="eyebrow">MAKE A DIFFERENCE</p><h2>Turn kindness into <span>action.</span></h2><p>Support a project or contact the Trust to learn how you can help. Replace the demo details below with your official donation information.</p></div>
-        <div class="donate-actions"><a class="btn primary" href="https://wa.me/923000000000" target="_blank" rel="noopener">WhatsApp Us ↗</a><button class="btn ghost" id="copyDonate">Copy Demo Account</button><small id="copied"></small></div>
+      <div class="donate-card reveal">
+        <div>
+          <p class="eyebrow">SUPPORT OUR MISSION</p>
+          <h2>Your support can help us serve communities with dignity.</h2>
+          <p>Donation details can be added here after the Trust confirms the final account information for this new website.</p>
+        </div>
+        <a class="btn btn-primary" href="mailto:info@kgntrust.org">Contact to Donate</a>
       </div>
     </section>
   </main>
 
-  <a class="whatsapp" href="https://wa.me/923000000000" target="_blank" rel="noopener" aria-label="WhatsApp">⌕</a>
-  <footer><div><b>Khwajja Gharib Nawaz Trust</b><p>Compassion in action • Community at heart.</p></div><div><a href="#about">About</a><a href="#projects">Projects</a><a href="#donate">Donate</a></div><small>© <span id="year"></span> KGN Trust. Demo website.</small></footer>
+  <footer>
+    <div class="footer-main">
+      <div><span class="brand-mark">KGN</span><h3>Khwaja Gharib Nawaz Trust</h3><p>Humanitarian Welfare Trust</p></div>
+      <div><h4>Contact</h4><p>House 126, Block-E, Unit No. 6,<br>Latifabad, Hyderabad, Sindh, Pakistan</p><p>info@kgntrust.org</p></div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> Khwaja Gharib Nawaz Trust. All rights reserved.</div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/" aria-label="WhatsApp">◔</a>
   <script src="script.js"></script>
 </body>
 </html>
