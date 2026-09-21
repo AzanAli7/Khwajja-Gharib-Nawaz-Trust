@@ -1,10 +1,23 @@
-# Khwajja Gharib Nawaz Trust
-Modern fictional/demo humanitarian website built with HTML, CSS and JavaScript.
+# KGN Trust — Official Content Website
 
-## Files
-- `index.html` — main page
-- `style.css` — design and responsive layout
-- `script.js` — animations and interactions
+This package is prepared from the publicly available content on the official Khwajja Gharib Nawaz Trust website.
+
+## Upload to GitHub Pages
+Upload these files to the ROOT of the repository:
+- index.html
+- style.css
+- script.js
+
+Do not upload the containing folder itself. The files must appear beside the repository's existing README.md.
 
 ## Important
-This is a demo. Replace the demo WhatsApp number, donation/account details, project figures and gallery panels with your official information before publishing.
+The three leadership photographs are referenced from the current official Google Sites image URLs. If the Trust wants the images hosted inside GitHub, download/replace them with authorized local copies later.
+
+Donation details are transcribed from the Trust's current official donation page. Verify the bank details before publishing or accepting transfers.
+
+Official source pages:
+- https://www.kgntrust.org/home
+- https://www.kgntrust.org/about-us
+- https://www.kgntrust.org/our-projects
+- https://www.kgntrust.org/gallery
+- https://www.kgntrust.org/donate
