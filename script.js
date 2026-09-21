@@ -1,1 +1,19 @@
-const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');menuBtn?.addEventListener('click',()=>{nav.style.display=nav.style.display==='flex'?'none':'flex'});nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=900)nav.style.display='none'}));const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));window.addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;document.getElementById('progress').style.width=(scrollY/h*100)+'%'});document.getElementById('year').textContent=new Date().getFullYear();
+
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('nav');
+if(menuBtn) menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+const progress=document.getElementById('progress');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(progress) progress.style.width=(h>0?(window.scrollY/h)*100:0)+'%';
+});
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const year=document.getElementById('year');
+if(year) year.textContent=new Date().getFullYear();
