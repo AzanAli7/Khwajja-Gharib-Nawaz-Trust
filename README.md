@@ -1,32 +1,19 @@
-# KGN Trust — GitHub-ready static website
+# KGN Trust — Advanced 3D GitHub Website
 
-This package is a new editable static website built from the visible content of the existing KGN Trust Google Sites website.
+This is the redesigned, editable static version of the KGN Trust website.
 
-## Upload to GitHub
+## Upload
+Upload all files to a GitHub repository, then:
+**Settings → Pages → Deploy from a branch → main → /(root) → Save**
 
-1. Create a new GitHub repository.
-2. Upload everything inside this folder.
-3. Open **Settings → Pages**.
-4. Select **Deploy from a branch**.
-5. Choose the `main` branch and `/ (root)`.
-6. Save and wait for GitHub Pages to publish.
+## Included pages
+Home, About, Projects, Gallery, Donate, Contact, Privacy Policy, Terms.
 
-## Pages
+## Design
+Dark premium 3D/glassmorphism interface, responsive mobile navigation, depth shadows, hover effects, animated reveal effects, modern cards and CTA buttons.
 
-- index.html
-- about.html
-- projects.html
-- gallery.html
-- donate.html
-- contact.html
-- privacy.html
-- terms.html
-
-## Important before publishing
-
-- Original Google-hosted images could not be copied automatically because their image URLs returned HTTP 403 to the retrieval service. No substitute images were inserted.
-- Banking information on the current site was copied as displayed, but must be checked against the Trust's official bank certificate before publishing.
-- The existing Terms and Conditions contain blank legal placeholders; this package does not invent them.
-- Review the spelling/name variants and all contact/banking details before making this the official replacement site.
-
-Source site: https://www.kgntrust.org/
+## Before publishing
+1. Add the Trust's original photographs under `images/`.
+2. Verify every banking digit against the official bank certificate.
+3. Review legal pages with the Trust's legal adviser.
+4. Check every phone, email, address and project figure.
