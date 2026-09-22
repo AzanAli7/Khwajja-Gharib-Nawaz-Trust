@@ -1,32 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const yearSpan = document.getElementById('year');
-  if(yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-  window.addEventListener('scroll', function() {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    const progress = document.getElementById('progress');
-    if(progress) progress.style.width = scrolled + '%';
+document.addEventListener("DOMContentLoaded",()=>{
+  const items=document.querySelectorAll(
+    ".card,.box,.project,.service,.feature,.gallery-item,.content-box,section"
+  );
+  items.forEach((el,i)=>{
+    el.style.setProperty("--i",Math.min(i,12));
+    el.classList.add("reveal");
   });
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}})
+  },{threshold:.08});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 
-  const menuBtn = document.getElementById('menuBtn');
-  const nav = document.getElementById('nav');
-  if(menuBtn && nav) {
-    menuBtn.addEventListener('click', function() {
-      if(nav.style.display === 'flex') {
-        nav.style.display = 'none';
-      } else {
-        nav.style.display = 'flex';
-        nav.style.flexDirection = 'column';
-        nav.style.position = 'absolute';
-        nav.style.top = '70px';
-        nav.style.left = '0';
-        nav.style.width = '100%';
-        nav.style.background = '#ffffff';
-        nav.style.padding = '20px';
-        nav.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-      }
+  document.querySelectorAll("a[href^='#']").forEach(a=>{
+    a.addEventListener("click",e=>{
+      const target=document.querySelector(a.getAttribute("href"));
+      if(target){e.preventDefault();target.scrollIntoView({behavior:"smooth",block:"start"});}
     });
-  }
+  });
 });
