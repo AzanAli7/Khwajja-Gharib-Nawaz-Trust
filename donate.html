@@ -47,10 +47,33 @@
   .donate-hero h2 { font-size: 20px; color: var(--primary-dark); font-weight: 700; margin-bottom: 12px; }
   .donate-hero p { font-size: 15px; color: var(--text-muted); max-width: 800px; margin: 0 auto; }
 
-  /* Compact 3D Payment Section */
+  .notice-banner { background: var(--gold-gradient); color: var(--primary-dark); padding: 12px 20px; border-radius: 10px; font-weight: 800; font-size: 14px; text-align: center; margin-top: 20px; box-shadow: 0 4px 15px rgba(212,175,55,0.3); }
+
+  /* Payment Section */
   .payment-section { padding: 30px 0 50px; }
   .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
   
+  /* Bank Cards */
+  .bank-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(11, 79, 70, 0.2);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: var(--shadow-3d);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .bank-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--primary); }
+  .bank-card.gold-card::before { background: var(--gold-gradient); }
+  .bank-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover-3d); border-color: var(--accent-gold); }
+  .bank-card h3 { color: var(--primary-dark); font-size: 18px; font-family: 'Playfair Display', serif; margin-bottom: 14px; text-align: center; }
+  
+  .detail-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 13px; border-bottom: 1px dashed rgba(11, 79, 70, 0.12); padding-bottom: 6px; }
+  .detail-row span { color: var(--text-muted); font-weight: 500; }
+  .detail-row b { color: var(--primary-dark); font-weight: 700; word-break: break-all; }
+
   /* Compact QR Cards */
   .qr-card { 
     background: var(--glass-bg); 
@@ -69,11 +92,10 @@
 
   .qr-card h3 { color: var(--primary-dark); font-size: 18px; font-family: 'Playfair Display', serif; margin-bottom: 10px; }
   
-  /* Compact QR Box Size */
   .qr-img-frame { 
-    width: 140px; 
-    height: 140px; 
-    margin: 0 auto 12px; 
+    width: 130px; 
+    height: 130px; 
+    margin: 0 auto 10px; 
     border-radius: 12px; 
     border: 3px solid var(--accent-gold); 
     box-shadow: 0 6px 15px rgba(0,0,0,0.1); 
@@ -88,7 +110,7 @@
     color: var(--accent-gold); 
     padding: 8px 10px; 
     border-radius: 10px; 
-    font-size: 16px; 
+    font-size: 15px; 
     font-weight: 800; 
     letter-spacing: 1.5px;
     margin-top: 10px;
@@ -96,26 +118,6 @@
     border: 1px solid var(--accent-gold);
   }
   .till-box span { display: block; font-size: 10px; color: #ffffff; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 2px; }
-
-  /* Full Bank Transfer Card */
-  .bank-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(11, 79, 70, 0.2);
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: var(--shadow-3d);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  .bank-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--primary); }
-  .bank-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover-3d); border-color: var(--primary); }
-  .bank-card h3 { color: var(--primary-dark); font-size: 18px; font-family: 'Playfair Display', serif; margin-bottom: 12px; text-align: center; }
-  
-  .detail-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 13px; border-bottom: 1px dashed rgba(11, 79, 70, 0.12); padding-bottom: 6px; }
-  .detail-row span { color: var(--text-muted); font-weight: 500; }
-  .detail-row b { color: var(--primary-dark); font-weight: 700; word-break: break-all; }
 
   /* Confirmation Box */
   .receipt-box { 
@@ -201,49 +203,58 @@
       <h1>Donate</h1>
       <h2>Support Our Humanitarian Work</h2>
       <p>Your contribution helps Khwajja Gharib Nawaz Trust provide essential humanitarian support to individuals and families in need through food assistance, healthcare support, education aid, and emergency relief operations.</p>
+      
+      <div class="notice-banner">
+        ✓ All donations are used strictly for humanitarian welfare purposes.
+      </div>
     </div>
   </section>
 
-  <!-- Payment Methods Section: Compact QR Codes & Full IBAN Details -->
+  <!-- Payment Methods Section -->
   <section class="payment-section">
     <div class="container">
       <div class="payment-grid">
         
-        <!-- Full Bank Transfer Details Card -->
+        <!-- Allied Bank Transfer Card -->
         <div class="bank-card">
-          <h3>🏛️ Direct Bank Transfer</h3>
+          <h3>🏛️ Allied Bank Limited</h3>
+          <div class="detail-row"><span>Account Title:</span> <b>Khwajja Gharib Nawaz Trust</b></div>
+          <div class="detail-row"><span>Bank Name:</span> <b>Allied Bank Limited Pakistan</b></div>
+          <div class="detail-row"><span>Branch Code:</span> <b>0433</b></div>
+          <div class="detail-row"><span>IBAN:</span> <b>PK78ABPA0010154056840012</b></div>
+        </div>
+
+        <!-- Mobilink Microfinance Bank Card -->
+        <div class="bank-card gold-card">
+          <h3>📱 Mobilink Microfinance Bank</h3>
           <div class="detail-row"><span>Account Title:</span> <b>KHWAJJA GHARIB NAWAZ TRUST</b></div>
-          <div class="detail-row"><span>Bank Name:</span> <b>Allied Bank Limited (ABL)</b></div>
-          <div class="detail-row"><span>Branch:</span> <b>Latifabad Unit No. 6, Hyderabad</b></div>
-          <div class="detail-row"><span>IBAN (Raast):</span> <b>PK35ABBL0000093010710101</b></div>
-          <div class="detail-row"><span>Account Type:</span> <b>Current Non-Profit Account</b></div>
-          <p style="font-size: 11px; color: var(--text-muted); margin-top: 8px;">* Use this IBAN for online banking, ATM transfers, and international wire transfers.</p>
+          <div class="detail-row"><span>Bank Name:</span> <b>Mobilink Microfinance Bank</b></div>
+          <div class="detail-row"><span>IBAN:</span> <b>PK82JCMA0000000145002931</b></div>
+          <div class="detail-row"><span>JazzCash Till ID:</span> <b>983144226</b></div>
         </div>
 
         <!-- Allied Bank Raast QR (Compact) -->
         <div class="qr-card">
-          <h3>Allied Bank / Raast QR</h3>
-          <p style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">Scan with Banking App or Raast</p>
+          <h3>Allied Bank QR</h3>
+          <p style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">Scan with Banking App</p>
           <div class="qr-img-frame">
             <img src="alliedbank-qr.jpeg" alt="Allied Bank Scan to Pay QR Code">
           </div>
-          <p style="font-weight:700; font-size:12px; color:var(--primary);">KHWAJJA GHARIB NAWAZ TRU</p>
           <div class="till-box">
-            <span>TILL ID / Raast Code</span>
+            <span>Raast Code / Till ID</span>
             930107101
           </div>
         </div>
 
         <!-- JazzCash Raast QR (Compact) -->
         <div class="qr-card">
-          <h3>JazzCash / Raast QR</h3>
-          <p style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">Scan or Dial *786*10#</p>
+          <h3>JazzCash QR</h3>
+          <p style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">Scan or Dial *786*10#</p>
           <div class="qr-img-frame">
             <img src="jazzcash-qr.jpeg" alt="JazzCash Scan to Pay QR Code">
           </div>
-          <p style="font-weight:700; font-size:12px; color:var(--primary);">KHWAJJA GHARIB NAWAZ TRUST</p>
           <div class="till-box">
-            <span>JazzCash TILL ID</span>
+            <span>JazzCash Till ID</span>
             983144226
           </div>
         </div>
