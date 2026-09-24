@@ -20,164 +20,110 @@
     --text-dark: #111d1b;
     --text-muted: #4e605d;
     --white: #ffffff;
-    --glass-bg: rgba(255, 255, 255, 0.9);
-    --shadow-3d: 0 12px 28px -5px rgba(11, 79, 70, 0.18), 0 6px 12px -4px rgba(0, 0, 0, 0.06);
-    --shadow-hover-3d: 0 20px 40px -8px rgba(11, 79, 70, 0.3), 0 12px 18px -6px rgba(212, 175, 55, 0.25);
+    --shadow-3d: 0 10px 25px -5px rgba(11, 79, 70, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+    --shadow-hover-3d: 0 18px 35px -8px rgba(11, 79, 70, 0.22), 0 8px 16px -4px rgba(212, 175, 55, 0.2);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'DM Sans', sans-serif; color: var(--text-dark); background: var(--bg-light); line-height: 1.6; overflow-x: hidden; }
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
   /* Header */
-  .site-header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(11, 79, 70, 0.1); position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+  .site-header { background: rgba(255, 255, 255, 0.98); border-bottom: 2px solid var(--accent-gold); position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
   .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; }
   .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-dark); }
-  .brand img { height: 48px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-  .brand span b { font-size: 22px; display: block; color: var(--primary); font-family: 'Playfair Display', serif; }
+  .brand img { height: 48px; border-radius: 8px; border: 1px solid var(--accent-gold); }
+  .brand span b { font-size: 20px; display: block; color: var(--primary); font-family: 'Playfair Display', serif; }
   .brand span small { font-size: 11px; color: var(--text-muted); display: block; letter-spacing: 0.5px; }
 
   nav a.nav-back { background: var(--primary); color: white; padding: 8px 18px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
   nav a.nav-back:hover { background: var(--primary-dark); }
 
   /* Hero Section */
-  .donate-hero { padding: 50px 0 30px; text-align: center; background: radial-gradient(circle at 50% 20%, #e1ecea 0%, #f4f8f7 70%); }
-  .eyebrow { background: rgba(212, 175, 55, 0.15); color: #8a6602; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.3); margin-bottom: 12px; }
-  .donate-hero h1 { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 900; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
-  .donate-hero h2 { font-size: 20px; color: var(--primary-dark); font-weight: 700; margin-bottom: 12px; }
-  .donate-hero p { font-size: 15px; color: var(--text-muted); max-width: 800px; margin: 0 auto; }
+  .donate-hero { padding: 40px 0 20px; text-align: center; }
+  .eyebrow { background: rgba(212, 175, 55, 0.15); color: #8a6602; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.4); margin-bottom: 10px; }
+  .donate-hero h1 { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; color: var(--primary-dark); margin-bottom: 6px; }
+  .donate-hero p { font-size: 15px; color: var(--text-muted); max-width: 780px; margin: 0 auto; }
 
-  .notice-banner { background: var(--gold-gradient); color: var(--primary-dark); padding: 12px 20px; border-radius: 10px; font-weight: 800; font-size: 14px; text-align: center; margin-top: 20px; box-shadow: 0 4px 15px rgba(212,175,55,0.3); }
+  .notice-banner { background: var(--gold-gradient); color: var(--primary-dark); padding: 12px 20px; border-radius: 10px; font-weight: 800; font-size: 15px; text-align: center; margin-top: 18px; box-shadow: 0 4px 15px rgba(212,175,55,0.3); }
 
-  /* Payment Section */
-  .payment-section { padding: 30px 0 50px; }
-  .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-  
-  /* Bank Cards */
-  .bank-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(11, 79, 70, 0.2);
-    border-radius: 16px;
-    padding: 22px;
+  /* Separated Bank Block Styles */
+  .bank-block {
+    background: var(--white);
+    border: 2px solid var(--primary);
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 35px;
     box-shadow: var(--shadow-3d);
-    transition: all 0.3s ease;
+    display: flex;
+    gap: 30px;
+    align-items: center;
     position: relative;
     overflow: hidden;
-  }
-  .bank-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--primary); }
-  .bank-card.gold-card::before { background: var(--gold-gradient); }
-  .bank-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover-3d); border-color: var(--accent-gold); }
-  .bank-card h3 { color: var(--primary-dark); font-size: 18px; font-family: 'Playfair Display', serif; margin-bottom: 14px; text-align: center; }
-  
-  .detail-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 13px; border-bottom: 1px dashed rgba(11, 79, 70, 0.12); padding-bottom: 6px; }
-  .detail-row span { color: var(--text-muted); font-weight: 500; }
-  .detail-row b { color: var(--primary-dark); font-weight: 700; word-break: break-all; }
-
-  /* Compact QR Cards */
-  .qr-card { 
-    background: var(--glass-bg); 
-    backdrop-filter: blur(10px); 
-    border: 2px solid rgba(212, 175, 55, 0.3); 
-    border-radius: 16px; 
-    padding: 20px 15px; 
-    text-align: center; 
-    box-shadow: var(--shadow-3d); 
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
   }
-  .qr-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover-3d); border-color: var(--accent-gold); }
-  .qr-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--gold-gradient); }
-
-  .qr-card h3 { color: var(--primary-dark); font-size: 18px; font-family: 'Playfair Display', serif; margin-bottom: 10px; }
+  .bank-block.gold-theme {
+    border-color: var(--accent-gold);
+  }
+  .bank-block:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover-3d);
+  }
   
-  .qr-img-frame { 
-    width: 130px; 
-    height: 130px; 
-    margin: 0 auto 10px; 
-    border-radius: 12px; 
-    border: 3px solid var(--accent-gold); 
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1); 
-    overflow: hidden; 
-    background: white;
-    padding: 6px;
-  }
-  .qr-img-frame img { width: 100%; height: 100%; object-fit: contain; }
+  /* Bank Info Left Column */
+  .bank-info-col { flex: 1.2; }
+  .bank-badge { display: inline-block; padding: 4px 12px; border-radius: 6px; font-weight: 700; font-size: 12px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+  .bank-block .bank-badge { background: var(--primary); color: white; }
+  .bank-block.gold-theme .bank-badge { background: #d4af37; color: #062e29; }
 
-  .till-box { 
-    background: linear-gradient(135deg, #062e29 0%, #0b4f46 100%); 
-    color: var(--accent-gold); 
-    padding: 8px 10px; 
-    border-radius: 10px; 
-    font-size: 15px; 
-    font-weight: 800; 
-    letter-spacing: 1.5px;
-    margin-top: 10px;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
-    border: 1px solid var(--accent-gold);
-  }
-  .till-box span { display: block; font-size: 10px; color: #ffffff; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 2px; }
+  .bank-info-col h2 { font-family: 'Playfair Display', serif; color: var(--primary-dark); font-size: 24px; margin-bottom: 16px; border-bottom: 2px solid rgba(11, 79, 70, 0.1); padding-bottom: 8px; }
+  
+  .detail-list { display: flex; flex-direction: column; gap: 10px; }
+  .detail-item { display: flex; justify-content: space-between; align-items: center; background: var(--bg-light); padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(11, 79, 70, 0.08); }
+  .detail-item span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+  .detail-item b { font-size: 14px; color: var(--primary-dark); font-weight: 800; font-family: monospace; letter-spacing: 0.5px; word-break: break-all; }
+  
+  /* Copy Button */
+  .btn-copy { background: var(--primary); color: white; border: none; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; margin-left: 8px; transition: background 0.2s; }
+  .btn-copy:hover { background: var(--accent-gold); color: var(--primary-dark); }
+
+  /* Bank QR Code Right Column */
+  .bank-qr-col { flex: 0.8; text-align: center; border-left: 2px dashed rgba(11, 79, 70, 0.15); padding-left: 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .qr-frame { width: 180px; height: 180px; padding: 8px; background: white; border: 3px solid var(--primary); border-radius: 14px; box-shadow: 0 6px 15px rgba(0,0,0,0.08); margin-bottom: 12px; }
+  .bank-block.gold-theme .qr-frame { border-color: var(--accent-gold); }
+  .qr-frame img { width: 100%; height: 100%; object-fit: contain; }
+
+  .qr-caption { font-size: 13px; font-weight: 700; color: var(--primary-dark); margin-bottom: 6px; }
+  .till-tag { background: var(--primary-dark); color: var(--accent-gold); font-weight: 800; font-size: 16px; padding: 6px 16px; border-radius: 8px; letter-spacing: 2px; border: 1px solid var(--accent-gold); display: inline-block; }
 
   /* Confirmation Box */
-  .receipt-box { 
-    background: linear-gradient(135deg, #0b4f46 0%, #062e29 100%); 
-    color: white; 
-    padding: 25px; 
-    border-radius: 16px; 
-    text-align: center; 
-    margin-top: 35px; 
-    border: 2px solid var(--accent-gold); 
-    box-shadow: var(--shadow-hover-3d); 
-  }
-  .receipt-box h4 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--accent-gold); margin-bottom: 8px; }
+  .receipt-box { background: linear-gradient(135deg, #0b4f46 0%, #062e29 100%); color: white; padding: 22px; border-radius: 14px; text-align: center; margin-top: 10px; border: 2px solid var(--accent-gold); box-shadow: var(--shadow-3d); }
+  .receipt-box h4 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--accent-gold); margin-bottom: 6px; }
   .receipt-box p { font-size: 14px; opacity: 0.95; }
   .receipt-box b { color: var(--accent-gold); }
 
   /* How Your Donation Helps Section */
-  .helps-section { padding: 50px 0; background: var(--bg-alt); }
-  .section-head { text-align: center; margin-bottom: 35px; }
-  .section-head h2 { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--primary-dark); font-weight: 800; }
+  .helps-section { padding: 45px 0; background: var(--bg-alt); margin-top: 40px; }
+  .section-head { text-align: center; margin-bottom: 30px; }
+  .section-head h2 { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--primary-dark); font-weight: 800; }
 
-  .helps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-  .help-item { 
-    background: var(--white); 
-    padding: 16px; 
-    border-radius: 10px; 
-    box-shadow: var(--shadow-3d); 
-    display: flex; 
-    align-items: center; 
-    gap: 12px; 
-    border-left: 4px solid var(--accent-gold); 
-    transition: all 0.3s ease; 
-  }
-  .help-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover-3d); }
-  .help-item .badge { 
-    background: var(--gold-gradient); 
-    color: var(--primary-dark); 
-    width: 28px; 
-    height: 28px; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-weight: 800; 
-    font-size: 13px;
-    flex-shrink: 0;
-  }
+  .helps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+  .help-item { background: var(--white); padding: 14px 16px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); display: flex; align-items: center; gap: 12px; border-left: 4px solid var(--accent-gold); }
+  .help-item .badge { background: var(--gold-gradient); color: var(--primary-dark); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; flex-shrink: 0; }
   .help-item p { font-size: 13px; font-weight: 600; color: var(--text-dark); }
 
-  /* Full Contact Footer Section */
-  footer { background: var(--primary-dark); color: white; padding: 45px 0 25px; border-top: 4px solid var(--accent-gold); margin-top: 50px; }
-  .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; margin-bottom: 30px; }
-  .footer-col h4 { font-family: 'Playfair Display', serif; color: var(--accent-gold); font-size: 18px; margin-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 6px; }
+  /* Footer */
+  footer { background: var(--primary-dark); color: white; padding: 40px 0 20px; border-top: 4px solid var(--accent-gold); margin-top: 40px; }
+  .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 25px; margin-bottom: 25px; }
+  .footer-col h4 { font-family: 'Playfair Display', serif; color: var(--accent-gold); font-size: 17px; margin-bottom: 10px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 6px; }
   .footer-col p, .footer-col a { font-size: 13px; color: #d0e0dd; text-decoration: none; line-height: 1.7; display: block; }
   .footer-col a:hover { color: var(--accent-gold); }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 12px; color: #a0b5b1; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 18px; text-align: center; font-size: 12px; color: #a0b5b1; }
 
-  @media (max-width: 768px) {
-    .donate-hero h1 { font-size: 34px; }
-    .payment-grid, .helps-grid, .footer-grid { grid-template-columns: 1fr; }
+  @media (max-width: 820px) {
+    .bank-block { flex-direction: column; text-align: center; }
+    .bank-qr-col { border-left: none; border-top: 2px dashed rgba(11, 79, 70, 0.15); padding-left: 0; padding-top: 20px; width: 100%; }
+    .detail-item { flex-direction: column; gap: 4px; }
   }
 </style>
 </head>
@@ -200,9 +146,8 @@
   <section class="donate-hero">
     <div class="container">
       <span class="eyebrow">Direct Support</span>
-      <h1>Donate</h1>
-      <h2>Support Our Humanitarian Work</h2>
-      <p>Your contribution helps Khwajja Gharib Nawaz Trust provide essential humanitarian support to individuals and families in need through food assistance, healthcare support, education aid, and emergency relief operations.</p>
+      <h1>Official Donation Accounts</h1>
+      <p>Your contribution directly supports Khwajja Gharib Nawaz Trust's welfare initiatives including food distribution, free medical aid, education support, and emergency relief across Sindh.</p>
       
       <div class="notice-banner">
         ✓ All donations are used strictly for humanitarian welfare purposes.
@@ -210,63 +155,105 @@
     </div>
   </section>
 
-  <!-- Payment Methods Section -->
-  <section class="payment-section">
+  <!-- Separate Bank Accounts Section -->
+  <section style="padding: 30px 0 10px;">
     <div class="container">
-      <div class="payment-grid">
-        
-        <!-- Bank 1: Allied Bank Limited -->
-        <div class="bank-card">
-          <h3>🏛️ 1st Bank: Allied Bank Limited</h3>
-          <div class="detail-row"><span>Account Title:</span> <b>Khwajja Gharib Nawaz Trust</b></div>
-          <div class="detail-row"><span>Bank Name:</span> <b>Allied Bank Limited Pakistan</b></div>
-          <div class="detail-row"><span>Branch Code:</span> <b>0433</b></div>
-          <div class="detail-row"><span>IBAN:</span> <b>PK78ABPA0010154056840012</b></div>
-        </div>
-
-        <!-- Bank 2: Mobilink Microfinance Bank -->
-        <div class="bank-card gold-card">
-          <h3>📱 2nd Bank: Mobilink Microfinance Bank</h3>
-          <div class="detail-row"><span>Account Title:</span> <b>KHWAJJA GHARIB NAWAZ TRUST</b></div>
-          <div class="detail-row"><span>Bank Name:</span> <b>Mobilink Microfinance Bank</b></div>
-          <div class="detail-row"><span>IBAN:</span> <b>PK82JCMA0000000145002931</b></div>
-          <div class="detail-row"><span>JazzCash Till ID:</span> <b>983144226</b></div>
-        </div>
-
-        <!-- Allied Bank Raast QR (Compact) -->
-        <div class="qr-card">
-          <h3>Allied Bank QR</h3>
-          <p style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">Scan with Banking App</p>
-          <div class="qr-img-frame">
-            <img src="alliedbank-qr.jpeg" alt="Allied Bank Scan to Pay QR Code">
-          </div>
-          <div class="till-box">
-            <span>Raast Code / Till ID</span>
-            930107101
-          </div>
-        </div>
-
-        <!-- JazzCash Raast QR (Compact) -->
-        <div class="qr-card">
-          <h3>JazzCash QR</h3>
-          <p style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">Scan or Dial *786*10#</p>
-          <div class="qr-img-frame">
-            <img src="jazzcash-qr.jpeg" alt="JazzCash Scan to Pay QR Code">
-          </div>
-          <div class="till-box">
-            <span>JazzCash Till ID</span>
-            983144226
+      
+      <!-- BANK ACCOUNT 1: ALLIED BANK LIMITED -->
+      <div class="bank-block">
+        <div class="bank-info-col">
+          <span class="bank-badge">1st Bank Account</span>
+          <h2>🏛️ Allied Bank Limited Pakistan</h2>
+          
+          <div class="detail-list">
+            <div class="detail-item">
+              <span>Account Title:</span>
+              <b>Khwajja Gharib Nawaz Trust</b>
+            </div>
+            <div class="detail-item">
+              <span>Branch Code:</span>
+              <b>0433</b>
+            </div>
+            <div class="detail-item">
+              <span>IBAN:</span>
+              <div>
+                <b id="abl-iban">PK78ABPA0010154056840012</b>
+                <button class="btn-copy" onclick="copyText('abl-iban')">Copy</button>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span>Raast / Till ID:</span>
+              <div>
+                <b id="abl-till">930107101</b>
+                <button class="btn-copy" onclick="copyText('abl-till')">Copy</button>
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Allied Bank QR Code Right -->
+        <div class="bank-qr-col">
+          <div class="qr-frame">
+            <img src="WhatsApp Image 2026-09-25 at 2.12.13 AM_2.jpeg" alt="Allied Bank Scan to Pay QR Code" onerror="this.src='alliedbank-qr.jpeg'">
+          </div>
+          <div class="qr-caption">Scan with Banking App</div>
+          <div class="till-tag">TILL ID: 930107101</div>
+        </div>
       </div>
 
-      <!-- Receipt Note -->
+      <!-- BANK ACCOUNT 2: MOBILINK MICROFINANCE BANK (JAZZCASH) -->
+      <div class="bank-block gold-theme">
+        <div class="bank-info-col">
+          <span class="bank-badge">2nd Bank Account</span>
+          <h2>📱 Mobilink Microfinance Bank (JazzCash)</h2>
+          
+          <div class="detail-list">
+            <div class="detail-item">
+              <span>Account Title:</span>
+              <b>KHWAJJA GHARIB NAWAZ TRUST</b>
+            </div>
+            <div class="detail-item">
+              <span>Bank Name:</span>
+              <b>Mobilink Microfinance Bank</b>
+            </div>
+            <div class="detail-item">
+              <span>IBAN:</span>
+              <div>
+                <b id="mmbl-iban">PK82JCMA0000000145002931</b>
+                <button class="btn-copy" onclick="copyText('mmbl-iban')">Copy</button>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span>JazzCash Till ID:</span>
+              <div>
+                <b id="jc-till">983144226</b>
+                <button class="btn-copy" onclick="copyText('jc-till')">Copy</button>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span>Quick Dial (Jazz):</span>
+              <b>Dial *786*10# & Enter Till ID 983144226</b>
+            </div>
+          </div>
+        </div>
+
+        <!-- JazzCash QR Code Right -->
+        <div class="bank-qr-col">
+          <div class="qr-frame">
+            <img src="JAZZ CASH_2.jpeg" alt="JazzCash Scan to Pay QR Code" onerror="this.src='jazzcash-qr.jpeg'">
+          </div>
+          <div class="qr-caption">Scan or Dial *786*10#</div>
+          <div class="till-tag" style="background:#d4af37; color:#062e29;">TILL ID: 983144226</div>
+        </div>
+      </div>
+
+      <!-- Receipt Verification Box -->
       <div class="receipt-box">
-        <h4>💡 Payment Verification & Receipt</h4>
-        <p>After completing your transaction via Bank Transfer, QR Code, or Till ID, please send your screenshot/receipt for official confirmation:</p>
+        <h4>💡 Payment Verification & Official Receipt</h4>
+        <p>After sending your donation via Bank Transfer, Raast, or Till ID, please send a screenshot/receipt for official acknowledgment:</p>
         <p style="margin-top:8px; font-size:15px;"><b>WhatsApp:</b> +92 316 3122297 &nbsp;|&nbsp; <b>Email:</b> info@kgntrust.org</p>
       </div>
+
     </div>
   </section>
 
@@ -274,31 +261,31 @@
   <section class="helps-section">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Impact & Utilization</span>
+        <span class="eyebrow">Impact & Transparency</span>
         <h2>How Your Donation Helps</h2>
       </div>
 
       <div class="helps-grid">
         <div class="help-item"><div class="badge">1</div><p>Community Food Assistance Programs (Langar & Cooked Meals)</p></div>
-        <div class="help-item"><div class="badge">2</div><p>Dry Ration Distribution for Underprivileged Families</p></div>
-        <div class="help-item"><div class="badge">3</div><p>Emergency Food Support during Disasters and Crises</p></div>
-        <div class="help-item"><div class="badge">4</div><p>Free Medical Aid & Basic Healthcare Support</p></div>
-        <div class="help-item"><div class="badge">5</div><p>Medical Camps and Health Awareness Programs</p></div>
+        <div class="help-item"><div class="badge">2</div><p>Dry Ration Distribution for Needy Families</p></div>
+        <div class="help-item"><div class="badge">3</div><p>Emergency Food Relief during Disasters</p></div>
+        <div class="help-item"><div class="badge">4</div><p>Free Medical Aid & Basic Healthcare</p></div>
+        <div class="help-item"><div class="badge">5</div><p>Free Medical Camps and Health Awareness</p></div>
         <div class="help-item"><div class="badge">6</div><p>Support for Orphans and Vulnerable Children</p></div>
-        <div class="help-item"><div class="badge">7</div><p>Assistance for Widows and Elderly Individuals</p></div>
-        <div class="help-item"><div class="badge">8</div><p>Education Support for Needy Students</p></div>
-        <div class="help-item"><div class="badge">9</div><p>School Supplies and Uniform Distribution</p></div>
-        <div class="help-item"><div class="badge">10</div><p>Clean Drinking Water & Basic Sanitation Support</p></div>
-        <div class="help-item"><div class="badge">11</div><p>Winter Relief Programs (Blankets, Warm Clothing)</p></div>
-        <div class="help-item"><div class="badge">12</div><p>Seasonal Relief Campaigns (Ramadan, Extreme Weather Support)</p></div>
+        <div class="help-item"><div class="badge">7</div><p>Financial Assistance for Widows & Senior Citizens</p></div>
+        <div class="help-item"><div class="badge">8</div><p>Educational Support & Fee Assistance</p></div>
+        <div class="help-item"><div class="badge">9</div><p>School Supplies and Books Distribution</p></div>
+        <div class="help-item"><div class="badge">10</div><p>Clean Drinking Water Projects & Sanitation</p></div>
+        <div class="help-item"><div class="badge">11</div><p>Winter Relief Camps (Blankets & Warm Clothes)</p></div>
+        <div class="help-item"><div class="badge">12</div><p>Ramadan Ration & Eid Gift Drives</p></div>
         <div class="help-item"><div class="badge">13</div><p>Emergency & Disaster Relief Operations</p></div>
-        <div class="help-item"><div class="badge">14</div><p>Support for Families Facing Sudden Hardship</p></div>
-        <div class="help-item"><div class="badge">15</div><p>Community Welfare & Social Support Services</p></div>
-        <div class="help-item"><div class="badge">16</div><p>Nutritional Support for Malnourished Individuals</p></div>
-        <div class="help-item"><div class="badge">17</div><p>Community Kitchens & Feeding Initiatives</p></div>
-        <div class="help-item"><div class="badge">18</div><p>Hygiene Kits and Essential Household Items Distribution</p></div>
-        <div class="help-item"><div class="badge">19</div><p>Support for Persons with Disabilities (Basic Assistance)</p></div>
-        <div class="help-item"><div class="badge">20</div><p>Community Development & Awareness Initiatives</p></div>
+        <div class="help-item"><div class="badge">14</div><p>Support for Families Facing Financial Crises</p></div>
+        <div class="help-item"><div class="badge">15</div><p>Community Welfare & Social Upliftment</p></div>
+        <div class="help-item"><div class="badge">16</div><p>Nutritional Aid for Malnourished Mothers & Children</p></div>
+        <div class="help-item"><div class="badge">17</div><p>Free Community Kitchens</p></div>
+        <div class="help-item"><div class="badge">18</div><p>Hygiene Kits & Essential Supplies Distribution</p></div>
+        <div class="help-item"><div class="badge">19</div><p>Special Support for Differently-Abled Persons</p></div>
+        <div class="help-item"><div class="badge">20</div><p>Community Guidance & Youth Development</p></div>
       </div>
     </div>
   </section>
@@ -311,27 +298,27 @@
       <div class="footer-col">
         <h4>KHWAJJA GHARIB NAWAZ TRUST</h4>
         <p>Serving Humanity with Faith, Love & Compassion.</p>
-        <p style="margin-top:10px;">A registered non-profit humanitarian organization dedicated to community welfare, healthcare, education, and social empowerment.</p>
+        <p style="margin-top:8px;">A registered non-profit organization dedicated to community welfare, healthcare, education, and social empowerment.</p>
       </div>
 
       <div class="footer-col">
         <h4>Head Office (Hyderabad)</h4>
         <p>House: 126, Block-E, Unit No. 6, Latifabad, Hyderabad, Sindh, Pakistan.</p>
-        <p style="margin-top:8px;">📞 +92 313 3047929</p>
+        <p style="margin-top:6px;">📞 +92 313 3047929</p>
         <p>📞 +92 316 3122297</p>
       </div>
 
       <div class="footer-col">
         <h4>Karachi Office</h4>
         <p>Plot #62/R, Sector Z-6, Gulshan-e-Maimar, Karachi, Sindh, Pakistan.</p>
-        <p style="margin-top:8px;">📞 +92 331 3196098</p>
+        <p style="margin-top:6px;">📞 +92 331 3196098</p>
       </div>
 
       <div class="footer-col">
         <h4>Email & Web</h4>
         <a href="mailto:chairman@kgntrust.org">✉ chairman@kgntrust.org</a>
         <a href="mailto:info@kgntrust.org">✉ info@kgntrust.org</a>
-        <a href="https://www.kgntrust.org" target="_blank" style="margin-top:8px;">🌐 www.kgntrust.org</a>
+        <a href="https://www.kgntrust.org" target="_blank" style="margin-top:6px;">🌐 www.kgntrust.org</a>
       </div>
     </div>
 
@@ -340,6 +327,15 @@
     </div>
   </div>
 </footer>
+
+<script>
+function copyText(elementId) {
+  var text = document.getElementById(elementId).innerText;
+  navigator.clipboard.writeText(text).then(function() {
+    alert("Copied to clipboard: " + text);
+  });
+}
+</script>
 
 </body>
 </html>
