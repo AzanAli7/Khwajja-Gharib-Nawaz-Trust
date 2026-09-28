@@ -1,341 +1,112 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-page="donate">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Donate | Khwajja Gharib Nawaz Trust</title>
-<meta name="description" content="Support Khwajja Gharib Nawaz Trust - Bank Transfer & QR Payment Details.">
+<title>Donate — Khwajja Gharib Nawaz Trust</title>
+<meta name="description" content="Support Khwaja Gharib Nawaz Trust's humanitarian work. Donate via bank transfer or our online donation form to fund food, healthcare, education and emergency relief programs.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --primary: #0b4f46;
-    --primary-dark: #062e29;
-    --primary-light: #166e63;
-    --accent-gold: #d4af37;
-    --gold-gradient: linear-gradient(135deg, #ffe082 0%, #d4af37 45%, #aa7c11 100%);
-    --bg-light: #f4f8f7;
-    --bg-alt: #e8f0ee;
-    --text-dark: #111d1b;
-    --text-muted: #4e605d;
-    --white: #ffffff;
-    --shadow-3d: 0 10px 25px -5px rgba(11, 79, 70, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
-    --shadow-hover-3d: 0 18px 35px -8px rgba(11, 79, 70, 0.22), 0 8px 16px -4px rgba(212, 175, 55, 0.2);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'DM Sans', sans-serif; color: var(--text-dark); background: var(--bg-light); line-height: 1.6; overflow-x: hidden; }
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-  /* Header */
-  .site-header { background: rgba(255, 255, 255, 0.98); border-bottom: 2px solid var(--accent-gold); position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-  .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; }
-  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-dark); }
-  .brand img { height: 48px; border-radius: 8px; border: 1px solid var(--accent-gold); }
-  .brand span b { font-size: 20px; display: block; color: var(--primary); font-family: 'Playfair Display', serif; }
-  .brand span small { font-size: 11px; color: var(--text-muted); display: block; letter-spacing: 0.5px; }
-
-  nav a.nav-back { background: var(--primary); color: white; padding: 8px 18px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
-  nav a.nav-back:hover { background: var(--primary-dark); }
-
-  /* Hero Section */
-  .donate-hero { padding: 40px 0 20px; text-align: center; }
-  .eyebrow { background: rgba(212, 175, 55, 0.15); color: #8a6602; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.4); margin-bottom: 10px; }
-  .donate-hero h1 { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; color: var(--primary-dark); margin-bottom: 6px; }
-  .donate-hero p { font-size: 15px; color: var(--text-muted); max-width: 780px; margin: 0 auto; }
-
-  .notice-banner { background: var(--gold-gradient); color: var(--primary-dark); padding: 12px 20px; border-radius: 10px; font-weight: 800; font-size: 15px; text-align: center; margin-top: 18px; box-shadow: 0 4px 15px rgba(212,175,55,0.3); }
-
-  /* Separated Bank Block Styles */
-  .bank-block {
-    background: var(--white);
-    border: 2px solid var(--primary);
-    border-radius: 18px;
-    padding: 28px;
-    margin-bottom: 35px;
-    box-shadow: var(--shadow-3d);
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  .bank-block.gold-theme {
-    border-color: var(--accent-gold);
-  }
-  .bank-block:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-hover-3d);
-  }
-  
-  /* Bank Info Left Column */
-  .bank-info-col { flex: 1.2; }
-  .bank-badge { display: inline-block; padding: 4px 12px; border-radius: 6px; font-weight: 700; font-size: 12px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
-  .bank-block .bank-badge { background: var(--primary); color: white; }
-  .bank-block.gold-theme .bank-badge { background: #d4af37; color: #062e29; }
-
-  .bank-info-col h2 { font-family: 'Playfair Display', serif; color: var(--primary-dark); font-size: 24px; margin-bottom: 16px; border-bottom: 2px solid rgba(11, 79, 70, 0.1); padding-bottom: 8px; }
-  
-  .detail-list { display: flex; flex-direction: column; gap: 10px; }
-  .detail-item { display: flex; justify-content: space-between; align-items: center; background: var(--bg-light); padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(11, 79, 70, 0.08); }
-  .detail-item span { font-size: 13px; color: var(--text-muted); font-weight: 600; }
-  .detail-item b { font-size: 14px; color: var(--primary-dark); font-weight: 800; font-family: monospace; letter-spacing: 0.5px; word-break: break-all; }
-  
-  /* Copy Button */
-  .btn-copy { background: var(--primary); color: white; border: none; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; margin-left: 8px; transition: background 0.2s; }
-  .btn-copy:hover { background: var(--accent-gold); color: var(--primary-dark); }
-
-  /* Bank QR Code Right Column */
-  .bank-qr-col { flex: 0.8; text-align: center; border-left: 2px dashed rgba(11, 79, 70, 0.15); padding-left: 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-  .qr-frame { width: 220px; height: 280px; padding: 6px; background: white; border: 3px solid var(--primary); border-radius: 14px; box-shadow: 0 6px 15px rgba(0,0,0,0.08); margin-bottom: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-  .bank-block.gold-theme .qr-frame { border-color: var(--accent-gold); background: #ffdc00; }
-  .qr-frame img { width: 100%; height: 100%; object-fit: contain; border-radius: 8px; }
-
-  .qr-caption { font-size: 13px; font-weight: 700; color: var(--primary-dark); margin-bottom: 6px; }
-  .till-tag { background: var(--primary-dark); color: var(--accent-gold); font-weight: 800; font-size: 15px; padding: 6px 16px; border-radius: 8px; letter-spacing: 1.5px; border: 1px solid var(--accent-gold); display: inline-block; }
-
-  /* Confirmation Box */
-  .receipt-box { background: linear-gradient(135deg, #0b4f46 0%, #062e29 100%); color: white; padding: 22px; border-radius: 14px; text-align: center; margin-top: 10px; border: 2px solid var(--accent-gold); box-shadow: var(--shadow-3d); }
-  .receipt-box h4 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--accent-gold); margin-bottom: 6px; }
-  .receipt-box p { font-size: 14px; opacity: 0.95; }
-  .receipt-box b { color: var(--accent-gold); }
-
-  /* How Your Donation Helps Section */
-  .helps-section { padding: 45px 0; background: var(--bg-alt); margin-top: 40px; }
-  .section-head { text-align: center; margin-bottom: 30px; }
-  .section-head h2 { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--primary-dark); font-weight: 800; }
-
-  .helps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
-  .help-item { background: var(--white); padding: 14px 16px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); display: flex; align-items: center; gap: 12px; border-left: 4px solid var(--accent-gold); }
-  .help-item .badge { background: var(--gold-gradient); color: var(--primary-dark); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; flex-shrink: 0; }
-  .help-item p { font-size: 13px; font-weight: 600; color: var(--text-dark); }
-
-  /* Footer */
-  footer { background: var(--primary-dark); color: white; padding: 40px 0 20px; border-top: 4px solid var(--accent-gold); margin-top: 40px; }
-  .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 25px; margin-bottom: 25px; }
-  .footer-col h4 { font-family: 'Playfair Display', serif; color: var(--accent-gold); font-size: 17px; margin-bottom: 10px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 6px; }
-  .footer-col p, .footer-col a { font-size: 13px; color: #d0e0dd; text-decoration: none; line-height: 1.7; display: block; }
-  .footer-col a:hover { color: var(--accent-gold); }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 18px; text-align: center; font-size: 12px; color: #a0b5b1; }
-
-  @media (max-width: 820px) {
-    .bank-block { flex-direction: column; text-align: center; }
-    .bank-qr-col { border-left: none; border-top: 2px dashed rgba(11, 79, 70, 0.15); padding-left: 0; padding-top: 20px; width: 100%; }
-    .detail-item { flex-direction: column; gap: 4px; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="index.html">
-      <img src="logo.jpg" alt="Khwajja Gharib Nawaz Trust logo">
-      <span><b>KGN TRUST</b><small>Khwajja Gharib Nawaz Trust</small></span>
-    </a>
-    <nav>
-      <a href="index.html" class="nav-back">← Back to Home</a>
-    </nav>
+<div id="header-placeholder"></div>
+
+<section class="page-hero">
+  <div class="wrap reveal-on-scroll">
+    <span class="eyebrow">Donate</span>
+    <h1>Support Our Humanitarian Work</h1>
+    <p class="lede">Your contribution helps Khwaja Gharib Nawaz Trust provide essential humanitarian support to individuals and families in need. Through your donations, we deliver food assistance, healthcare support, education aid, and emergency relief to vulnerable communities.</p>
+    <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSfs7M0TprThtcMiQrnI8h_ignIPki6y0VYJUYvjqSD_JwQ-lg/viewform" target="_blank" rel="noopener">Open Donation Form</a>
   </div>
-</header>
+</section>
 
-<main>
-  <!-- Hero Section -->
-  <section class="donate-hero">
-    <div class="container">
-      <span class="eyebrow">Direct Support</span>
-      <h1>Official Donation Accounts</h1>
-      <p>Your contribution directly supports Khwajja Gharib Nawaz Trust's welfare initiatives including food distribution, free medical aid, education support, and emergency relief across Sindh.</p>
-      
-      <div class="notice-banner">
-        ✓ All donations are used strictly for humanitarian welfare purposes.
+<section>
+  <div class="wrap">
+    <div class="section-head reveal-on-scroll">
+      <span class="eyebrow">Impact</span>
+      <h2>How Your Donation Helps</h2>
+    </div>
+    <ul class="program-list reveal-on-scroll">
+      <li>Community Food Assistance Programs (Langar &amp; Cooked Meals)</li>
+      <li>Dry Ration Distribution for Underprivileged Families</li>
+      <li>Emergency Food Support during Disasters and Crises</li>
+      <li>Free Medical Aid &amp; Basic Healthcare Support</li>
+      <li>Medical Camps and Health Awareness Programs</li>
+      <li>Support for Orphans and Vulnerable Children</li>
+      <li>Assistance for Widows and Elderly Individuals</li>
+      <li>Education Support for Needy Students</li>
+      <li>School Supplies and Uniform Distribution</li>
+      <li>Clean Drinking Water &amp; Basic Sanitation Support</li>
+      <li>Winter Relief Programs (Blankets, Warm Clothing)</li>
+      <li>Seasonal Relief Campaigns (Ramadan, Extreme Weather Support)</li>
+      <li>Emergency &amp; Disaster Relief Operations</li>
+      <li>Support for Families Facing Sudden Hardship</li>
+      <li>Community Welfare &amp; Social Support Services</li>
+      <li>Nutritional Support for Malnourished Individuals</li>
+      <li>Community Kitchens &amp; Feeding Initiatives</li>
+      <li>Hygiene Kits and Essential Household Items Distribution</li>
+      <li>Support for Persons with Disabilities (Basic Assistance)</li>
+      <li>Community Development &amp; Awareness Initiatives</li>
+    </ul>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap reveal-on-scroll" style="max-width:760px;">
+    <h2>Transparency &amp; Responsible Use of Funds</h2>
+    <p>KGN Trust is committed to transparency and accountability. All donations are utilized responsibly and directed toward humanitarian welfare and community support programs.</p>
+    <p>We provide humanitarian assistance without discrimination based on religion, sect, ethnicity, or background. All donations are used strictly for humanitarian welfare purposes.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal-on-scroll">
+      <span class="eyebrow">Bank Transfer</span>
+      <h2>Account Details</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="bank-card reveal-on-scroll">
+        <h3>Allied Bank Limited Pakistan</h3>
+        <p>Account Title: Khwajja Gharib Nawaz Trust</p>
+        <span class="iban">PK78ABPA0010154056840012</span>
+        <p>Branch code: 0433</p>
+        <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tFpHrN0ukG06TCk3qkNA3ylN0vefvp5MpxE1CbuTSDfcDeGtl6CLT7p-ibdYhgZFkKxDeEEKiE6i3CEiZd2Zrtu07ylOuv_oOb5qaQ0gBG0gTUXmxc6ONgMtvNBwYSubsRUnZLMgcHOcOHW4XPhdIStgPRQ_UWHENPux-WHyAYE6NOgYUnDDi9aYqtqP26G4jIQLPMDnAbHdQONKUh1Wi6BDVVDIt3oq0qofyi=w1280" alt="Allied Bank account details">
+        <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72uD_ltuRn9DGOGO86Px74oH88JBOcJJaVfuwlr4_9YZ-eEI0Fz_yoOtmSFtbPYgNRs7xx_VkONOm3XdimgYEvopFnQYiEYDS1TXsZTP1jI54dKDnQO1yd6xLUphONY47GlqfS3-e57irhT6I4m-kFAAd-MFursc1Irke8bwrNCs-hVlMm-iNOf_C_NIwK4KG2PSsULYx35FgtbAFH1KnVPCK13JfAgQgP78sw=w1280" alt="Allied Bank account slip">
+      </div>
+      <div class="bank-card reveal-on-scroll">
+        <h3>Khwajja Gharib Nawaz Trust</h3>
+        <p>Account Title: Khwajja Gharib Nawaz Trust</p>
+        <span class="iban">PK82JCMA0000000145002931</span>
+        <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tqcM_TiM14MlLRudLpufWtbzClHqrlkA_C1fi8oB9hcvgJ_u6TS90jrhpo-FgNootaJKd0u9YtoFO-SviqaNpZAhn3kc0ctJVacOH68y3DePserbbaAZfO5JWd3zs8_244BTFoAM8EpjrYhEI6EZTQ9bxUDoycDAvCM54QfuxXmiipqI_65vvqp1zGACa08aI9TCuYFptFpIL5jtPqjJNiYfJnRb63WgFwPyor=w1280" alt="Second bank account details">
       </div>
     </div>
-  </section>
+    <p style="margin-top:16px;font-size:0.88rem;color:var(--ink-soft);">Please confirm the exact bank name printed on the account slip above before transferring, and share your transaction reference with <a href="mailto:info@kgntrust.org">info@kgntrust.org</a> so we can issue an acknowledgment.</p>
+  </div>
+</section>
 
-  <!-- Separate Bank Accounts Section -->
-  <section style="padding: 30px 0 10px;">
-    <div class="container">
-      
-      <!-- BANK ACCOUNT 1: ALLIED BANK LIMITED -->
-      <div class="bank-block">
-        <div class="bank-info-col">
-          <span class="bank-badge">1st Bank Account</span>
-          <h2>🏛️ Allied Bank Limited Pakistan</h2>
-          
-          <div class="detail-list">
-            <div class="detail-item">
-              <span>Account Title:</span>
-              <b>Khwajja Gharib Nawaz Trust</b>
-            </div>
-            <div class="detail-item">
-              <span>Branch Code:</span>
-              <b>0433</b>
-            </div>
-            <div class="detail-item">
-              <span>IBAN:</span>
-              <div>
-                <b id="abl-iban">PK78ABPA0010154056840012</b>
-                <button class="btn-copy" onclick="copyText('abl-iban')">Copy</button>
-              </div>
-            </div>
-            <div class="detail-item">
-              <span>Raast / Till ID:</span>
-              <div>
-                <b id="abl-till">930107101</b>
-                <button class="btn-copy" onclick="copyText('abl-till')">Copy</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Allied Bank QR Code Right -->
-        <div class="bank-qr-col">
-          <div class="qr-frame">
-            <img src="images/allied-qr.jpeg" alt="Allied Bank QR Code" onerror="this.src='images/ALLIED BANK QR CODE.jpeg'">
-          </div>
-          <div class="qr-caption">Scan with Banking App</div>
-          <div class="till-tag">TILL ID: 930107101</div>
-        </div>
-      </div>
-
-      <!-- BANK ACCOUNT 2: MOBILINK MICROFINANCE BANK (JAZZCASH) -->
-      <div class="bank-block gold-theme">
-        <div class="bank-info-col">
-          <span class="bank-badge">2nd Bank Account</span>
-          <h2>📱 Mobilink Microfinance Bank (JazzCash)</h2>
-          
-          <div class="detail-list">
-            <div class="detail-item">
-              <span>Account Title:</span>
-              <b>KHWAJJA GHARIB NAWAZ TRUST</b>
-            </div>
-            <div class="detail-item">
-              <span>Bank Name:</span>
-              <b>Mobilink Microfinance Bank</b>
-            </div>
-            <div class="detail-item">
-              <span>IBAN:</span>
-              <div>
-                <b id="mmbl-iban">PK82JCMA0000000145002931</b>
-                <button class="btn-copy" onclick="copyText('mmbl-iban')">Copy</button>
-              </div>
-            </div>
-            <div class="detail-item">
-              <span>JazzCash Till ID:</span>
-              <div>
-                <b id="jc-till">983144226</b>
-                <button class="btn-copy" onclick="copyText('jc-till')">Copy</button>
-              </div>
-            </div>
-            <div class="detail-item">
-              <span>Quick Dial (Jazz):</span>
-              <b>Dial *786*10# & Enter Till ID 983144226</b>
-            </div>
-          </div>
-        </div>
-
-        <!-- JazzCash QR Code Poster Right -->
-        <div class="bank-qr-col">
-          <div class="qr-frame">
-            <img src="images/jazzcash-qr.jpeg" alt="JazzCash QR Code" onerror="this.src='images/JAZZ CASH QR CODE.jpeg'">
-          </div>
-          <div class="qr-caption">Scan or Dial *786*10#</div>
-          <div class="till-tag" style="background:#d4af37; color:#062e29;">TILL ID: 983144226</div>
-        </div>
-      </div>
-
-      <!-- Receipt Verification Box -->
-      <div class="receipt-box">
-        <h4>💡 Payment Verification & Official Receipt</h4>
-        <p>After sending your donation via Bank Transfer, Raast, or Till ID, please send a screenshot/receipt for official acknowledgment:</p>
-        <p style="margin-top:8px; font-size:15px;"><b>WhatsApp:</b> +92 316 3122297 &nbsp;|&nbsp; <b>Email:</b> info@kgntrust.org</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- How Your Donation Helps Section (20 Points) -->
-  <section class="helps-section">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Impact & Transparency</span>
-        <h2>How Your Donation Helps</h2>
-      </div>
-
-      <div class="helps-grid">
-        <div class="help-item"><div class="badge">1</div><p>Community Food Assistance Programs (Langar & Cooked Meals)</p></div>
-        <div class="help-item"><div class="badge">2</div><p>Dry Ration Distribution for Needy Families</p></div>
-        <div class="help-item"><div class="badge">3</div><p>Emergency Food Relief during Disasters</p></div>
-        <div class="help-item"><div class="badge">4</div><p>Free Medical Aid & Basic Healthcare</p></div>
-        <div class="help-item"><div class="badge">5</div><p>Free Medical Camps and Health Awareness</p></div>
-        <div class="help-item"><div class="badge">6</div><p>Support for Orphans and Vulnerable Children</p></div>
-        <div class="help-item"><div class="badge">7</div><p>Financial Assistance for Widows & Senior Citizens</p></div>
-        <div class="help-item"><div class="badge">8</div><p>Educational Support & Fee Assistance</p></div>
-        <div class="help-item"><div class="badge">9</div><p>School Supplies and Books Distribution</p></div>
-        <div class="help-item"><div class="badge">10</div><p>Clean Drinking Water Projects & Sanitation</p></div>
-        <div class="help-item"><div class="badge">11</div><p>Winter Relief Camps (Blankets & Warm Clothes)</p></div>
-        <div class="help-item"><div class="badge">12</div><p>Ramadan Ration & Eid Gift Drives</p></div>
-        <div class="help-item"><div class="badge">13</div><p>Emergency & Disaster Relief Operations</p></div>
-        <div class="help-item"><div class="badge">14</div><p>Support for Families Facing Financial Crises</p></div>
-        <div class="help-item"><div class="badge">15</div><p>Community Welfare & Social Upliftment</p></div>
-        <div class="help-item"><div class="badge">16</div><p>Nutritional Aid for Malnourished Mothers & Children</p></div>
-        <div class="help-item"><div class="badge">17</div><p>Free Community Kitchens</p></div>
-        <div class="help-item"><div class="badge">18</div><p>Hygiene Kits & Essential Supplies Distribution</p></div>
-        <div class="help-item"><div class="badge">19</div><p>Special Support for Differently-Abled Persons</p></div>
-        <div class="help-item"><div class="badge">20</div><p>Community Guidance & Youth Development</p></div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- Full Detailed Footer -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>KHWAJJA GHARIB NAWAZ TRUST</h4>
-        <p>Serving Humanity with Faith, Love & Compassion.</p>
-        <p style="margin-top:8px;">A registered non-profit organization dedicated to community welfare, healthcare, education, and social empowerment.</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Head Office (Hyderabad)</h4>
-        <p>House: 126, Block-E, Unit No. 6, Latifabad, Hyderabad, Sindh, Pakistan.</p>
-        <p style="margin-top:6px;">📞 +92 313 3047929</p>
-        <p>📞 +92 316 3122297</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Karachi Office</h4>
-        <p>Plot #62/R, Sector Z-6, Gulshan-e-Maimar, Karachi, Sindh, Pakistan.</p>
-        <p style="margin-top:6px;">📞 +92 331 3196098</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Email & Web</h4>
-        <a href="mailto:chairman@kgntrust.org">✉ chairman@kgntrust.org</a>
-        <a href="mailto:info@kgntrust.org">✉ info@kgntrust.org</a>
-        <a href="https://www.kgntrust.org" target="_blank" style="margin-top:6px;">🌐 www.kgntrust.org</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      © 2026 KHWAJJA GHARIB NAWAZ TRUST | All Rights Reserved
+<section class="alt">
+  <div class="wrap">
+    <div class="donate-cta reveal-on-scroll">
+      <h2>Prefer an Online Form?</h2>
+      <p>Use our secure Google Form to record your donation details, or reach out directly for guidance on Zakat, Sadqah, or General Fund contributions.</p>
+      <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSfs7M0TprThtcMiQrnI8h_ignIPki6y0VYJUYvjqSD_JwQ-lg/viewform" target="_blank" rel="noopener">Open Donation Form</a>
     </div>
   </div>
-</footer>
+</section>
 
-<script>
-function copyText(elementId) {
-  var text = document.getElementById(elementId).innerText;
-  navigator.clipboard.writeText(text).then(function() {
-    alert("Copied to clipboard: " + text);
-  });
-}
-</script>
+<section class="tight">
+  <div class="wrap map-frame reveal-on-scroll">
+    <iframe src="https://maps-api-ssl.google.com/maps?hl=en-US&amp;ll=25.365729,68.347487&amp;output=embed&amp;q=25.365915,68.347442&amp;z=19" loading="lazy" title="KGN Trust head office location"></iframe>
+  </div>
+</section>
 
+<div id="footer-placeholder"></div>
+
+<script src="js/include.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

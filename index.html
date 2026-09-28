@@ -1,404 +1,106 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-page="home">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Khwajja Gharib Nawaz Trust | Humanitarian Welfare Trust</title>
-<meta name="description" content="Khwajja Gharib Nawaz Trust — serving humanity through compassion, welfare and social responsibility.">
+<title>Khwajja Gharib Nawaz Trust</title>
+<meta name="description" content="Serving Humanity Through Compassion, Welfare, and Social Responsibility. KGN Trust provides food assistance, healthcare, education and emergency relief across Sindh, Pakistan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --primary: #0b4f46;
-    --primary-dark: #062e29;
-    --primary-light: #166e63;
-    --accent-gold: #d4af37;
-    --gold-gradient: linear-gradient(135deg, #ffe082 0%, #d4af37 45%, #aa7c11 100%);
-    --bg-light: #f4f8f7;
-    --bg-alt: #e8f0ee;
-    --text-dark: #111d1b;
-    --text-muted: #4e605d;
-    --white: #ffffff;
-    --shadow-3d: 0 15px 35px -5px rgba(11, 79, 70, 0.2), 0 8px 15px -6px rgba(0, 0, 0, 0.08);
-    --shadow-hover-3d: 0 25px 50px -10px rgba(11, 79, 70, 0.35), 0 15px 20px -8px rgba(212, 175, 55, 0.3);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'DM Sans', sans-serif; color: var(--text-dark); background: var(--bg-light); line-height: 1.6; overflow-x: hidden; }
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-  /* Progress Bar */
-  .progress { position: fixed; top: 0; left: 0; height: 4px; background: var(--gold-gradient); z-index: 1000; width: 0%; transition: width 0.1s; }
-
-  /* Header */
-  .site-header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(11, 79, 70, 0.1); position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
-  .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; }
-  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-dark); }
-  .brand img { height: 48px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-  .brand span b { font-size: 22px; display: block; color: var(--primary); font-family: 'Playfair Display', serif; }
-  .brand span small { font-size: 11px; color: var(--text-muted); display: block; letter-spacing: 0.5px; }
-
-  nav { display: flex; gap: 18px; align-items: center; }
-  nav a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 14px; transition: all 0.3s ease; }
-  nav a:hover { color: var(--primary); }
-  nav a.nav-donate { background: var(--gold-gradient); color: var(--primary-dark); padding: 10px 22px; border-radius: 8px; font-weight: 700; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
-  nav a.nav-donate:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5); }
-  .menu-btn { display: none; background: none; border: none; font-size: 26px; cursor: pointer; color: var(--primary); }
-
-  /* Hero Section */
-  .hero { padding: 85px 0; background: radial-gradient(circle at 80% 20%, #e1ecea 0%, #f4f8f7 60%); position: relative; overflow: hidden; }
-  .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
-  .eyebrow { background: rgba(212, 175, 55, 0.15); color: #8a6602; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.3); margin-bottom: 15px; }
-  
-  /* Extra Big Full Gold Headline */
-  .hero-copy h1.hero-title-gold { 
-    font-family: 'Playfair Display', serif; 
-    font-size: 56px; 
-    font-weight: 900; 
-    line-height: 1.1; 
-    margin-bottom: 15px; 
-    letter-spacing: -0.5px;
-    background: var(--gold-gradient); 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
-  }
-  
-  .hero-copy h2.subhead { font-size: 19px; color: var(--primary); font-weight: 600; margin-bottom: 18px; line-height: 1.4; }
-  .hero-copy p.lead { font-size: 15px; color: var(--text-muted); margin-bottom: 30px; max-width: 550px; }
-  
-  .actions { display: flex; gap: 15px; margin-bottom: 25px; }
-  .btn { padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; display: inline-block; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
-  .btn.primary { background: var(--primary); color: white; box-shadow: var(--shadow-3d); }
-  .btn.primary:hover { transform: translateY(-4px) scale(1.02); background: var(--primary-dark); box-shadow: var(--shadow-hover-3d); }
-  .btn.ghost { border: 2px solid var(--primary); color: var(--primary); background: rgba(255,255,255,0.6); }
-  .btn.ghost:hover { background: var(--primary); color: white; transform: translateY(-3px); }
-  
-  .mini-points { display: flex; gap: 20px; font-size: 13px; font-weight: 700; color: var(--primary); }
-
-  /* 3D Orb with Founder Photo Frame */
-  .hero-art { position: relative; display: flex; justify-content: center; align-items: center; min-height: 380px; perspective: 1000px; }
-  
-  .orb-wrapper { position: relative; width: 250px; height: 250px; display: flex; align-items: center; justify-content: center; }
-  .orb-ring { position: absolute; border-radius: 50%; border: 2px dashed rgba(212, 175, 55, 0.6); animation: spin 20s linear infinite; }
-  .orb-ring.r1 { width: 280px; height: 280px; border-style: solid; border-color: rgba(11, 79, 70, 0.25); }
-  .orb-ring.r2 { width: 320px; height: 320px; border-color: rgba(212, 175, 55, 0.5); animation-direction: reverse; animation-duration: 25s; }
-  
-  .orb-core.founder-orb { 
-    width: 230px; 
-    height: 230px; 
-    border-radius: 50%; 
-    overflow: hidden;
-    position: relative;
-    border: 5px solid var(--accent-gold); 
-    box-shadow: 0 20px 50px rgba(11, 79, 70, 0.4), 0 0 25px rgba(212, 175, 55, 0.4); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--primary-dark);
-    transition: all 0.5s ease;
-  }
-  .orb-core.founder-orb img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    transition: transform 0.5s ease;
-  }
-  .orb-core.founder-orb:hover img { transform: scale(1.1); }
-  
-  .orb-badge {
-    position: absolute;
-    bottom: 8px;
-    background: var(--gold-gradient);
-    color: var(--primary-dark);
-    font-size: 11px;
-    font-weight: 800;
-    padding: 3px 14px;
-    border-radius: 12px;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 5;
-  }
-
-  .floating-card { position: absolute; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.8); padding: 12px 18px; border-radius: 12px; box-shadow: var(--shadow-3d); font-size: 12px; font-weight: 600; color: var(--primary-dark); transition: all 0.4s ease; animation: float 4s ease-in-out infinite; z-index: 6; }
-  .floating-card.c1 { top: 15px; left: -20px; transform: rotate(-3deg); }
-  .floating-card.c2 { bottom: 15px; right: -20px; transform: rotate(3deg); animation-delay: 2s; }
-  .floating-card:hover { transform: translateY(-8px) scale(1.05) !important; box-shadow: var(--shadow-hover-3d); }
-
-  @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-  @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
-
-  /* Ticker */
-  .ticker { background: linear-gradient(90deg, #062e29 0%, #0b4f46 50%, #062e29 100%); color: var(--accent-gold); padding: 14px 0; display: flex; justify-content: space-around; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-top: 2px solid var(--accent-gold); border-bottom: 2px solid var(--accent-gold); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-
-  /* Sections */
-  .section { padding: 70px 0; }
-  .section.alt { background: var(--bg-alt); }
-  .section-head { text-align: center; margin-bottom: 45px; }
-  .section-head h2 { font-family: 'Playfair Display', serif; font-size: 36px; color: var(--primary-dark); font-weight: 700; }
-
-  /* 3D Cards */
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
-  .card { background: var(--white); padding: 28px; border-radius: 14px; box-shadow: var(--shadow-3d); border: 1px solid rgba(11, 79, 70, 0.08); transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
-  .card:hover { transform: translateY(-10px) scale(1.02); box-shadow: var(--shadow-hover-3d); border-color: var(--accent-gold); }
-  .card .icon { background: var(--gold-gradient); color: var(--primary-dark); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; margin-bottom: 18px; box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3); }
-
-  /* About & Founder */
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center; }
-  .about-image img { width: 100%; border-radius: 16px; box-shadow: var(--shadow-3d); border: 4px solid var(--white); }
-  .quote { font-style: italic; border-left: 4px solid var(--accent-gold); padding-left: 18px; margin-top: 20px; font-weight: 600; color: var(--primary); font-size: 17px; }
-
-  .founder-card { display: flex; gap: 35px; background: var(--white); padding: 35px; border-radius: 16px; box-shadow: var(--shadow-3d); align-items: center; border: 1px solid rgba(212, 175, 55, 0.2); transition: all 0.4s ease; }
-  .founder-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover-3d); }
-  .founder-photo img { width: 190px; height: 190px; object-fit: cover; border-radius: 50%; border: 5px solid var(--accent-gold); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-
-  /* Leadership */
-  .leaders { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; text-align: center; }
-  .leader { background: var(--white); padding: 25px; border-radius: 14px; box-shadow: var(--shadow-3d); transition: all 0.4s ease; }
-  .leader:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover-3d); }
-  .leader img { width: 130px; height: 130px; border-radius: 50%; margin-bottom: 15px; object-fit: cover; border: 3px solid var(--primary-light); }
-  .leader h3 { font-size: 17px; margin-bottom: 5px; color: var(--primary-dark); }
-  .leader span { color: var(--accent-gold); font-size: 13px; font-weight: 700; text-transform: uppercase; }
-
-  /* Projects & Gallery */
-  .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 25px; }
-  .project { background: var(--white); padding: 25px; border-radius: 12px; border-top: 5px solid var(--primary); box-shadow: var(--shadow-3d); transition: all 0.3s ease; }
-  .project:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover-3d); }
-  .tag { background: rgba(11, 79, 70, 0.1); color: var(--primary-dark); font-size: 11px; padding: 4px 10px; border-radius: 6px; font-weight: 700; }
-
-  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; text-align: center; }
-  .service-photo { background: var(--white); padding: 22px; border-radius: 12px; box-shadow: var(--shadow-3d); transition: all 0.3s ease; }
-  .service-photo:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover-3d); }
-  .service-photo img { width: 65px; height: 65px; margin-bottom: 12px; }
-
-  /* Donate & Contact */
-  .donate-box { background: linear-gradient(135deg, #0b4f46 0%, #062e29 100%); color: white; padding: 50px; border-radius: 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 22px; box-shadow: var(--shadow-hover-3d); border: 2px solid var(--accent-gold); }
-  .donate-box h2 { color: white; font-family: 'Playfair Display', serif; font-size: 34px; }
-  .btn.big { background: var(--gold-gradient); color: var(--primary-dark); font-size: 18px; padding: 16px 42px; border-radius: 35px; box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4); }
-  .btn.big:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 15px 35px rgba(212, 175, 55, 0.6); }
-
-  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
-
-  /* Footer & WhatsApp */
-  footer { background: var(--primary-dark); color: white; padding: 35px 0; font-size: 14px; border-top: 3px solid var(--accent-gold); }
-  .footer-wrap { display: flex; justify-content: space-between; align-items: center; }
-  .whatsapp { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; text-decoration: none; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5); z-index: 999; transition: all 0.3s ease; }
-  .whatsapp:hover { transform: scale(1.1) rotate(10deg); }
-
-  @media (max-width: 768px) {
-    .hero-grid, .about-grid, .founder-card { grid-template-columns: 1fr; text-align: center; }
-    .hero-copy h1.hero-title-gold { font-size: 38px; }
-    nav { display: none; }
-    .menu-btn { display: block; }
-    .ticker { flex-direction: column; gap: 8px; text-align: center; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="progress" id="progress"></div>
 
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="#home">
-      <img src="logo.jpg" alt="Khwajja Gharib Nawaz Trust logo">
-      <span><b>KGN TRUST</b><small>Khwajja Gharib Nawaz Trust</small></span>
-    </a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-    <nav id="nav">
-      <a href="#home">Home</a><a href="#about">About Us</a><a href="#work">What We Do</a><a href="#moments">Moments</a>
-      <a href="#founder">Founder</a><a href="#leadership">Leadership</a><a href="#projects">Projects</a><a href="#gallery">Gallery</a>
-      <a class="nav-donate" href="donate.html">Donate</a>
-    </nav>
-  </div>
-</header>
+<div id="header-placeholder"></div>
 
-<main id="home">
 <section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy reveal">
-      <span class="eyebrow">Humanitarian Welfare Trust</span>
-      
-      <!-- Big Golden Headline -->
-      <h1 class="hero-title-gold">Khwajja Gharib Nawaz Trust</h1>
-      
-      <!-- Sub-heading -->
-      <h2 class="subhead">Serving Humanity Through Compassion, Welfare & Social Responsibility</h2>
-      
-      <p class="lead">KGN Trust is a non-profit humanitarian welfare organization dedicated to supporting underprivileged communities through food assistance, healthcare support, education, and social welfare initiatives.</p>
-      
-      <div class="actions">
-        <a class="btn primary" href="donate.html">Support Our Work</a>
-        <a class="btn ghost" href="#about">Discover KGN Trust</a>
-      </div>
-      
-      <div class="mini-points">
-        <span>✓ Food Assistance</span>
-        <span>✓ Medical Support</span>
-        <span>✓ Education Aid</span>
-      </div>
+  <div class="wrap hero-inner">
+    <div class="reveal-on-scroll">
+      <span class="eyebrow">Founder Trust: late Syed Amir Moin Kazmi</span>
+      <h1>Khwajja Gharib Nawaz Trust</h1>
+      <p class="founder-line">Humanitarian Welfare Trust</p>
+      <p class="lede">Serving Humanity Through Compassion, Welfare, and Social Responsibility.</p>
+      <p>KGN Trust is a non-profit humanitarian welfare organization dedicated to supporting underprivileged communities through food assistance, healthcare support, education, and social welfare initiatives.</p>
+      <a class="btn btn-gold" href="donate.html">Donate Now</a>
+      <a class="btn btn-outline-dark" href="about-us.html">Learn About Us</a>
     </div>
-    
-    <!-- 3D Gold Frame with Founder Image -->
-    <div class="hero-art reveal">
-      <div class="orb-wrapper">
-        <div class="orb-ring r1"></div>
-        <div class="orb-ring r2"></div>
-        <div class="orb-core founder-orb">
-          <img src="founder-amir-moin-kazmi.png" alt="Late Syed Amir Moin Kazmi" loading="lazy">
-          <div class="orb-badge">FOUNDER</div>
-        </div>
-      </div>
-      <div class="floating-card c1">Late Syed Amir Moin Kazmi<br><b style="color:var(--primary)">Founder Trust</b></div>
-      <div class="floating-card c2">Faith • Love • Service</div>
+    <div class="hero-figure reveal-on-scroll">
+      <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72theOq_YlrcbfSaFSKwzqNGPVTa0ItUroq-U27FmSxsN2W_vALeaC1X_PLVOl5TqVgdIG_ZnA7cGIAzz8qkb3qa1inVfmTv1ibCKysWKGihAi359NRNnrF-WUZ-rMQ5g7hNXRwFee4Cg0S4yansmUK8WGofI2WYNNCJ57wN891JIncOQtpSHkSdRcCR8hOEoAH9ML03GgpiosON94qaGCBv_ShkfIWsc6yLSpgfKtY=w1280" alt="Syed Adnan Moin Kazmi, Chairman of Khwajja Gharib Nawaz Trust">
     </div>
   </div>
 </section>
 
-<section class="ticker">
-  <div>KHWAJJA GHARIB NAWAZ TRUST</div>
-  <div>Serving Humanity with Faith, Love & Compassion</div>
-  <div>Humanitarian Welfare • Community Support • Social Responsibility</div>
-</section>
-
-<section id="about" class="section">
-<div class="container">
-  <div class="section-head reveal"><span class="eyebrow">About Us</span><h2>Who We Are</h2></div>
-  <div class="about-grid">
-    <div class="about-image reveal"><img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vbG4A12DAeufkC_BWeSHZKWp59WfxzN0-DjpwQUhsjDUWbYUBS-RC_8G4P7DJde2aYd9j6na80nPeonaSuluxNh5lnEBDYgy_WoQzN63lmeoSGI1ZEMrwYtEsi8VifxITjWX9wyf_i3baCy_tWXPSRym8d0e_jSw7VwaQNPgFRtexsJOzuftQV0PnBE5w=w16383" alt="KGN Trust community image" loading="lazy"></div>
-    <div class="about-copy reveal">
+<section class="alt">
+  <div class="wrap grid grid-2">
+    <div class="reveal-on-scroll">
+      <h2>Who We Are</h2>
       <p>KGN Trust works to improve the lives of vulnerable individuals and families by providing essential humanitarian support.</p>
       <p>We focus on dignity, transparency, and compassion while serving communities regardless of religion, background, or ethnicity.</p>
-      <div class="quote">“Serving humanity through compassion, welfare, and social responsibility.”</div>
+    </div>
+    <div class="reveal-on-scroll">
+      <h2>What We Do</h2>
+      <ul class="program-list">
+        <li>Food Assistance &amp; Community Feeding, Langer Programs</li>
+        <li>Medical Aid &amp; Health Support Initiatives</li>
+        <li>Free Medical Camps &amp; Basic Health Awareness</li>
+        <li>Support for Orphans and Widows</li>
+        <li>Education Assistance &amp; School Support Programs</li>
+        <li>Emergency &amp; Disaster Relief Activities</li>
+        <li>Winter Relief (Blankets, Clothing Distribution)</li>
+        <li>Clean Water &amp; Basic Sanitation Support</li>
+        <li>Support for Underprivileged Families</li>
+        <li>Community Welfare &amp; Social Support Services</li>
+      </ul>
     </div>
   </div>
-</div>
 </section>
 
-<section id="work" class="section alt">
-<div class="container">
-  <div class="section-head reveal"><span class="eyebrow">What We Do</span><h2>Practical support for people and communities</h2></div>
-  <div class="cards">
-    <article class="card reveal"><div class="icon">1</div><h3>Food Assistance & Langer Programs</h3><p>Food support and community feeding initiatives for people facing hardship.</p></article>
-    <article class="card reveal"><div class="icon">2</div><h3>Medical Aid & Health Support</h3><p>Medical assistance and basic health support for vulnerable communities.</p></article>
-    <article class="card reveal"><div class="icon">3</div><h3>Free Medical Camps</h3><p>Community-focused medical camps and health awareness activities.</p></article>
-    <article class="card reveal"><div class="icon">4</div><h3>Support for Orphans and Widows</h3><p>Humanitarian support for vulnerable families, including orphans and widows.</p></article>
-    <article class="card reveal"><div class="icon">5</div><h3>Education Assistance</h3><p>Education assistance and support for deserving students and schools.</p></article>
-    <article class="card reveal"><div class="icon">6</div><h3>Emergency & Relief Activities</h3><p>Relief support during emergencies and difficult circumstances.</p></article>
-    <article class="card reveal"><div class="icon">7</div><h3>Winter Relief</h3><p>Blankets and clothing distribution for people in need during winter.</p></article>
-    <article class="card reveal"><div class="icon">8</div><h3>Clean Water Support</h3><p>Support focused on clean drinking water and basic sanitation.</p></article>
-    <article class="card reveal"><div class="icon">9</div><h3>Underprivileged Family Aid</h3><p>Practical assistance for families facing financial and social hardship.</p></article>
-    <article class="card reveal"><div class="icon">10</div><h3>Community Welfare Services</h3><p>Community welfare and social support programs aimed at dignity and inclusion.</p></article>
-  </div>
-</div>
-</section>
-
-<section id="founder" class="section founder-section">
-<div class="container">
-  <div class="section-head reveal"><span class="eyebrow">Founder</span><h2>Founder Trust — Late Syed Amir Moin Kazmi</h2></div>
-  <div class="founder-card reveal">
-    <div class="founder-photo"><img src="founder-amir-moin-kazmi.png" alt="Founder Trust — Late Syed Amir Moin Kazmi" loading="lazy"></div>
-    <div class="founder-copy">
-      <span class="eyebrow" style="margin-bottom:8px;">Founder Trust</span>
-      <h3 style="font-size:24px; color:var(--primary-dark); margin-bottom:10px;">Late Syed Amir Moin Kazmi</h3>
-      <p>The Founder Trust section is presented separately and prominently to honour the founder and preserve his place in the Trust's story and identity.</p>
+<section>
+  <div class="wrap">
+    <div class="section-head reveal-on-scroll">
+      <span class="eyebrow">Leadership</span>
+      <h2>Board of Trustees</h2>
+    </div>
+    <div class="people-grid">
+      <div class="person reveal-on-scroll">
+        <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72theOq_YlrcbfSaFSKwzqNGPVTa0ItUroq-U27FmSxsN2W_vALeaC1X_PLVOl5TqVgdIG_ZnA7cGIAzz8qkb3qa1inVfmTv1ibCKysWKGihAi359NRNnrF-WUZ-rMQ5g7hNXRwFee4Cg0S4yansmUK8WGofI2WYNNCJ57wN891JIncOQtpSHkSdRcCR8hOEoAH9ML03GgpiosON94qaGCBv_ShkfIWsc6yLSpgfKtY=w400" alt="Syed Adnan Moin Kazmi">
+        <h3>Syed Adnan Moin Kazmi</h3>
+        <span class="role">Chairman</span>
+      </div>
+      <div class="person reveal-on-scroll">
+        <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72uY6OiWt3b2M7gUAroVqxjIfM8oKbwK73W4q__UHfb3DUET1hlVvs3V72LFkpCeujm4YyNg90ei3AiGBMahVRrAnwCLlM-dTjhDYcWSDknZ0ePKfL11CpXpckTr0FSS8kpYE-swclLFxGFCuJo7lOaec2VINAmN5ha4BIZ0G7lbem03hgjNzYfj4kK2NQjDDeoaPRb_88nejWKbkkQr-FCbjj5HuNn-SmCASE1XbGQ=w400" alt="Syed Rizwan Moin Kazmi">
+        <h3>Syed Rizwan Moin Kazmi</h3>
+        <span class="role">General Secretary</span>
+      </div>
+      <div class="person reveal-on-scroll">
+        <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72v8wX1A9DUvDo_1TkfioGLOk-lQ3P-xeLzrgKkrcVpT3Dsjppt5BNdGdZYolyrOCN0bkdMeDIUHQsM74bJy2IvgnLbF2TCgQlH5JjExiMthAwaiwN1HWhQJGR-QZADgw4AFlevgNVMndpgRzscqqInqk8z3VJvSpkD2PFao_o2JbUjEHuTGlhqwlIcFqbgTjyrioAnDRfkZPocKpZBbcaN1ljFW_ptXrdUPqJIfdVw=w400" alt="Syed Muhammad Owais Gardazi">
+        <h3>Syed Muhammad Owais Gardazi</h3>
+        <span class="role">In-Charge, Karachi Office</span>
+      </div>
     </div>
   </div>
-</div>
 </section>
 
-<section id="leadership" class="section">
-<div class="container">
-  <div class="section-head reveal"><span class="eyebrow">Leadership</span><h2>Board of Trustees</h2></div>
-  <div class="leaders">
-    <article class="leader reveal"><img src="chairman.jpg" alt="Syed Adnan Moin Kazmi" loading="lazy"><h3>Syed Adnan Moin Kazmi</h3><span>Chairman</span></article>
-    <article class="leader reveal"><img src="general-secretary.jpg" alt="Syed Rizwan Moin Kazmi" loading="lazy"><h3>Syed Rizwan Moin Kazmi</h3><span>General Secretary</span></article>
-    <article class="leader reveal"><img src="karachi-incharge.jpg" alt="Syed Muhammad Owais Gardazi" loading="lazy"><h3>Syed Muhammad Owais Gardazi</h3><span>In-Charge Karachi Office</span></article>
+<section class="alt">
+  <div class="wrap">
+    <div class="donate-cta reveal-on-scroll">
+      <h2>Support Our Humanitarian Work</h2>
+      <p>Your donation helps provide food, healthcare, education, and emergency support to individuals and families in need. All donations are used for humanitarian welfare purposes only.</p>
+      <a class="btn btn-gold" href="donate.html">Donate Now</a>
+    </div>
   </div>
-</div>
 </section>
 
-<section id="projects" class="section alt">
-<div class="container">
-  <div class="section-head reveal"><span class="eyebrow">Our Projects</span><h2>Building a future of education & healthcare</h2></div>
-  <div class="project-grid">
-    <article class="project reveal"><span class="tag">Education</span><h3 style="margin:10px 0;">Modern School of Technology</h3><p>Digital classrooms, STEM/Robotics lab, computer labs, 3D printing studio, auditorium, and sports ground.</p></article>
-    <article class="project reveal"><span class="tag">Healthcare</span><h3 style="margin:10px 0;">Healthcare Complex</h3><p>Charitable hospital with emergency services, OPD, wards, operating theaters, maternity, laboratory, and pharmacy.</p></article>
-    <article class="project reveal"><span class="tag">Diagnostics</span><h3 style="margin:10px 0;">Advanced Diagnostic Lab</h3><p>Automated blood pathology, microbiology, digital X-ray, ultrasound, and CT with digital reporting.</p></article>
-    <article class="project reveal"><span class="tag">Emergency</span><h3 style="margin:10px 0;">Ambulance Service</h3><p>Dedicated ambulance bay with ALS and BLS equipped vehicles for emergency transit.</p></article>
+<section class="tight">
+  <div class="wrap map-frame reveal-on-scroll">
+    <iframe src="https://maps-api-ssl.google.com/maps?hl=en-US&amp;ll=25.365729,68.347487&amp;output=embed&amp;q=25.365915,68.347442&amp;z=19" loading="lazy" title="KGN Trust head office location"></iframe>
   </div>
-</div>
 </section>
 
-<section id="moments" class="section">
-<div class="container">
-  <div class="section-head reveal"><span class="eyebrow">Moments of Service</span><h2>Humanitarian support areas</h2></div>
-  <div class="gallery moments-gallery">
-    <div class="service-photo reveal"><img src="service-food.svg" alt="Food assistance"><h3>Food Assistance</h3></div>
-    <div class="service-photo reveal"><img src="service-medical.svg" alt="Medical aid"><h3>Medical Aid</h3></div>
-    <div class="service-photo reveal"><img src="service-education.svg" alt="Education assistance"><h3>Education Assistance</h3></div>
-    <div class="service-photo reveal"><img src="service-relief.svg" alt="Disaster relief"><h3>Disaster Relief</h3></div>
-    <div class="service-photo reveal"><img src="service-water.svg" alt="Clean water"><h3>Clean Water</h3></div>
-    <div class="service-photo reveal"><img src="service-community.svg" alt="Community welfare"><h3>Community Welfare</h3></div>
-  </div>
-</div>
-</section>
+<div id="footer-placeholder"></div>
 
-<section id="donate" class="section donate-section">
-<div class="container donate-box reveal">
-  <div><span class="eyebrow" style="background:rgba(212,175,55,0.2); color:#fff; border-color:var(--accent-gold)">Support Our Humanitarian Work</span><h2>Your support can help provide essential assistance.</h2><p style="max-width:600px; margin:0 auto; opacity:0.9;">Your donation helps provide food, healthcare, education, and emergency support to individuals and families in need.</p></div>
-  <a class="btn big" href="donate.html">Donate Now</a>
-</div>
-</section>
-
-<section id="contact" class="section contact">
-<div class="container">
-  <div class="section-head"><span class="eyebrow">Contact</span><h2>Connect with KGN Trust</h2></div>
-  <div class="contact-grid">
-    <div><h3>Head Office</h3><p>House: 126, Block-E, Unit No. 6, Latifabad, Hyderabad, Sindh, Pakistan.</p><p>📞 +923133047929<br>+923163122297</p></div>
-    <div><h3>Karachi Office</h3><p>Plot #62/R, Sector Z-6, Gulshan-e-Maimar, Karachi, Sindh, Pakistan.</p><p>📞 +923313196098</p></div>
-    <div><h3>Email</h3><p><a href="mailto:chairman@kgntrust.org">chairman@kgntrust.org</a><br><a href="mailto:info@kgntrust.org">info@kgntrust.org</a></p><p><a href="https://www.kgntrust.org" target="_blank" rel="noopener">www.kgntrust.org</a></p></div>
-  </div>
-</div>
-</section>
-</main>
-
-<footer><div class="container footer-wrap"><div><b>KHWAJJA GHARIB NAWAZ TRUST</b><p>Serving Humanity with Faith, Love & Compassion</p></div><div>© <span id="year">2026</span> KGN Trust | All Rights Reserved</div></div></footer>
-<a class="whatsapp" href="https://wa.me/923163122297" target="_blank" rel="noopener" aria-label="WhatsApp">☏</a>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const yearSpan = document.getElementById('year');
-    if(yearSpan) yearSpan.textContent = new Date().getFullYear();
-
-    window.addEventListener('scroll', function() {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      const progress = document.getElementById('progress');
-      if(progress) progress.style.width = scrolled + '%';
-    });
-
-    const menuBtn = document.getElementById('menuBtn');
-    const nav = document.getElementById('nav');
-    if(menuBtn && nav) {
-      menuBtn.addEventListener('click', function() {
-        if(nav.style.display === 'flex') {
-          nav.style.display = 'none';
-        } else {
-          nav.style.display = 'flex';
-          nav.style.flexDirection = 'column';
-          nav.style.position = 'absolute';
-          nav.style.top = '70px';
-          nav.style.left = '0';
-          nav.style.width = '100%';
-          nav.style.background = '#ffffff';
-          nav.style.padding = '20px';
-          nav.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-        }
-      });
-    }
-  });
-</script>
+<script src="js/include.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
